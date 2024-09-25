@@ -1,4 +1,4 @@
-# Project Name
+# OCC Hack GUI
 
 Edit this section with a brief explanation of your project.
 
