@@ -63,7 +63,6 @@ People+ai connects do-ers, dreamers, tinkerers and innovators with ideas & resou
 ## Acknowledgements
 We sincerely thank the following people who's open sourced code has helped us.
 - [Abdul Rehman](https://github.com/abdulrcs) for the website structure and code.
-- 
 Made with ♥️ for 🇮🇳 by Team People+AI
 
 
