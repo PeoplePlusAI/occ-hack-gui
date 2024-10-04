@@ -1,32 +1,38 @@
-# OCC Hack GUI
 
-Edit this section with a brief explanation of your project.
+![](https://framerusercontent.com/images/VDOI9Zu8yzJNPNE77mn2dlGJLZ8.png?scale-down-to=512 "Open Cloud Compute")
 
-## Table of Contents
+# ⚡ Open Cloud Compute Frontend
+The Frontend for the Open Cloud Compute prototype. Open Cloud Compute (OCC) is an initiative launched by the EkStep Foundation in India to create a decentralized and interoperable cloud computing network. We aim to connect independent micro data centers, enhancing access to computing resources while promoting local data sovereignty. By fostering competition among smaller providers, we seeks to democratize cloud services, making them more accessible and affordable for businesses of all sizes.
 
-- [Introduction](#introduction)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [Documentation](#documentation)
-- [Issues](#issues)
-- [Pull Requests](#pull-requests)
-- [Volunteer](#volunteer)
+## 🛠 Get started
 
-## Introduction
+### Getting the API Keys
+Create an `.env` and follow the variable name based on `.env.example` and get the GitHub API Key.
+Steps to generate the API key:
+- [Generate an API key](https://github.com/settings/tokens/new)
+- [Add permissions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#about-the-token-permissions)
+Provide the API key to the `GITHUB_TOKEN` environment variable.
+Also add the `GITHUB_ID` and `GITHUB_REPO` to the `.env`
 
-Replace this section with a more detailed introduction to your project. Explain its purpose, main features, and any other relevant information.
+### Starting the Project
+1. Clone the repository: `git clone https://github.com/PeoplePlusAI/occ-hack-gui.git`
+2. Install the dependencies with `npm i` 
+3. Start the project by `npm run dev`
 
-## Getting Started
+## Publishing Blogs
+You can find the steps to publish a blog on the website in the BlogTemplate Folder.
 
-Update this section with instructions on how to get started with your project:
+## Overview of the project
+`pages/index.js`: Homepage of the frontend 
+`pages/resources/index.js` : Resource Page
+`pages/about/index.js` : About Page
+`pages/blog/index.js` : Blog Listing page  
+`pages/blog/[slug].js` : Blog post page   
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repository.git`
-
-2. Commands for installing dependencies
-   
-3. Commands for running the project
-
-4. Link to the project's live demo (if available) or local server
+## Tech Stack Used
+- Next.js
+- Chakra UI
+- MDX (next-mdx-remote)
 
 ## Contributing
 
@@ -40,14 +46,7 @@ Explain where to find and how to use your project's documentation:
 The `docs` folder contains project documentation and related documents. To access or contribute to the documentation, please refer to [docs/README.md](docs/README.md).
 
 ## Issues
-
-Provide instructions for reporting issues:
-
 If you encounter any issues with the project, please create a new issue using the [issue template](.github/ISSUE_TEMPLATE.md). Provide as much detail as possible to help us understand and resolve the issue.
-
-## Pull Requests
-
-Explain your process for accepting pull requests:
 
 
 ## Volunteer & contribute
@@ -61,4 +60,10 @@ If you would like to contribute to the codebase, please refer to the [CONTRIBUTI
 
 People+ai connects do-ers, dreamers, tinkerers and innovators with ideas & resources to build an ecosystem that can empower a billion people to reach their potential - [Know More](https://peopleplus.ai/)
 
+## Acknowledgements
+We sincerely thank the following people who's open sourced code has helped us.
+- [Abdul Rehman](https://github.com/abdulrcs) for the website structure and code.
+- 
 Made with ♥️ for 🇮🇳 by Team People+AI
+
+
