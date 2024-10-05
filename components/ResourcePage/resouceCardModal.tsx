@@ -26,7 +26,7 @@ interface ResourceCardProps {
   memory: string
   compute: string
   endpoint: string
-  usecases: string[]
+  useCases: string[]
   pythonVersion: string
   xaas: {
     presence: string
@@ -52,6 +52,7 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
       maxW="sm"
       minW="16.5em"
       borderColor="blue.200"
+      onClick={onOpen}
     >
       <VStack align="stretch" spacing={3}>
       <HStack spacing={3}>
@@ -70,7 +71,7 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
             <Text fontSize="sm" color="gray.400">
               Type
             </Text>
-            <Text fontSize="sm">{resourceCard.computeType == 1  ?  "CPU" : "GPU" }</Text>
+            <Text fontSize="sm">{resourceCard.computeType == 1  ?  "GPU" : "CPU" }</Text>
           </HStack>
           <HStack justify="space-between">
             <Text fontSize="sm" color="gray.400">
@@ -123,7 +124,7 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
         </div>
       </VStack>
 
-      <Modal isOpen={isOpen} onClose={onClose} size="lg">
+      <Modal isOpen={isOpen} onClose={onClose} size="lg" isCentered>
         <ModalOverlay />
         <ModalContent backgroundColor="black" border="3px solid lightgreen">
           <ModalHeader>{resourceCard.providerName} - Details</ModalHeader>
@@ -136,7 +137,7 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
               <Text><strong>Memory:</strong> {resourceCard.memory}</Text>
               <Text><strong>Compute:</strong> {resourceCard.compute}</Text>
               <Text><strong>Python Version:</strong> {resourceCard.pythonVersion}</Text>
-              <Text><strong>Use Cases:</strong> {resourceCard.usecases.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(', ')}</Text>
+              <Text><strong>Use Cases:</strong> {resourceCard.useCases.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(', ')}</Text>
               <Text><strong>XaaS:</strong> {resourceCard.xaas.presence} (Template: {resourceCard.xaas.templateName}, Version: {resourceCard.xaas.version})</Text>
             </VStack>
           </ModalBody>

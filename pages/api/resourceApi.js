@@ -8,13 +8,13 @@ function formatData(item) {
     resourceId: item["resourceId"],
     occSpecName: item["occn-spec-name"] || null, // Assuming these fields may be missing
     occSpecVersion: item["occn-spec-version"] || null, // Same assumption as above
-    storage: item["requiredSpecifications"]["storage"].hasOwnProperty('SSD') ? item["requiredSpecifications"]["storage"]["SSD"] : "N/A",
-    memory: item["requiredSpecifications"]["memory"]["RAM"] || "Null",
+    storage: item["requiredSpecifications"]["storage"].hasOwnProperty('SSD') ? item["requiredSpecifications"]["storage"]["SSD"] : "0 GB",
+    memory: item["requiredSpecifications"]["memory"]["RAM"] || "0 GB",
     compute: item["requiredSpecifications"]["compute"].hasOwnProperty('GPU') 
         ? item["requiredSpecifications"]["compute"]["GPU"] 
         : item["requiredSpecifications"]["compute"]["type"],
     endpoint: item["endpoint"],
-    usecases: item["requiredSpecifications"]["usecases"],
+    useCases: item["requiredSpecifications"]["usecases"],
     pythonVersion: item["other"]["pythonVersion"] || '-',
     xaas: {
       presence: item["xaas"]["presence"],

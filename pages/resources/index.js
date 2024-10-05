@@ -11,29 +11,39 @@ import useMediaQuery from '../../hook/useMediaQuery'
 import { BsGpuCard } from "react-icons/bs";
 import {fetchDataFromAPI} from '../api/resourceApi'
 import customTheme from '../../styles/theme'
-import {getProvidersList, getUseCasesList} from '../../utils/resourcePage'
+import {getProvidersList, getUseCasesList, getMaximumStorage, applyFilter} from '../../utils/resourcePage'
 
 export default function Resources({ projects }) {
 
-    const [currentSelection, setSelection] = useState();
+    const [currentFilters, setFilters] = useState({
+      "useCases" : [],
+      "minStorage" : 0,
+      "providers" : [],
+      "computeSelection" : null
+    });
     const [ResourceCardList, setData] = useState([]);
+    // const [ResourceCardListFilter, setFilter] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [usecasesDropdown, setUsecasesDropdown] = useState([]);
     const [providersDropdown, setProviderssDropdown] = useState([]);
-    const [maxStroage, setMaxStroage] = useState([]);
+    const [maxStroage, setMaxStroage] = useState(100);
+    // const []
 
     useEffect(() => {
       const fetchData = async () => {
         try {
           const result = await fetchDataFromAPI();  // Call the API function
           setData(result);  // Update state with the fetched data
+          // setFilter(result);
           setUsecasesDropdown(getUseCasesList(result))
           setProviderssDropdown(getProvidersList(result))
+          setMaxStroage(getMaximumStorage(result))
         } catch (error) {
           setError(error.message);  // Set error if any occurs
         } finally {
-          setLoading(false);  // Stop the loading state
+          setLoading(false);
+          // setLoading(false);  // Stop the loading state
         }
       };
 
@@ -71,14 +81,14 @@ export default function Resources({ projects }) {
         <SelectionIconButton text='Task' icon={FaServer} onClick={() => setSelection(ResourceTypes.TASK)} isActive={ResourceTypes.TASK==currentSelection}/>
         </Stack>
       </SlideFade> */}
-      <HorizontalFilterUI theme={customTheme} providers={providersDropdown} usecases={usecasesDropdown}/>
+      <HorizontalFilterUI theme={customTheme} providers={providersDropdown} usecases={usecasesDropdown} setFilterSelection={setFilters} filterData={currentFilters} maxStorage={maxStroage}/>
             <Divider />
           </Stack>
           <HStack>
             {/* <FilterUI /> */}
           <SimpleGrid columns={{ sm: 2, md: 4 }} spacing={6}>
             {ResourceCardList.map(function(object, i){
-              if(currentSelection == null || currentSelection != null && currentSelection == object.resourceType){
+              if(applyFilter(object, currentFilters)){
                 return <ResourceCard key={i} resourceCard={object} />;
               }
             })}

@@ -29,25 +29,59 @@ import { ChevronDownIcon } from '@chakra-ui/icons'
 import SelectionIconButton from './selectionButton'
 import { FaServer, FaDatabase } from 'react-icons/fa'
 import { BsGpuCard } from "react-icons/bs";
+import {ComputeTypes} from "../../components/ResourcePage/resouceCardModal"
 
 
 // const categories = ['Electronics', 'Clothing', 'Books', 'Home & Garden', 'Toys']
 // const providers = ['Vigyan Labs', 'Jarvis Labs']
 // const usecases = ['Computer Vision', 'Language', 'LLM', 'Audio', 'Visual Recognition']
 
-export default function HorizontalFilterUI({providers, usecases}) {
-  const [searchTerm, setSearchTerm] = useState('')
+export default function HorizontalFilterUI({providers, usecases=null, setFilterSelection, filterData, maxStorage=100}) {
+  // const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const [useCases, setuseCases] = useState<string[]>([])
-  const [priceRange, setPriceRange] = useState(50)
-  const [storage, setStorage] = useState(50)
+  // const [priceRange, setPriceRange] = useState(50)
+  const [currentSelection, setSelection] = useState()
+  const [storage, setStorage] = useState(0)
 
   const handleCategoryChange = (values: string[]) => {
     setSelectedCategories(values)
+    setFilterSelection(
+      {
+        ...filterData,
+        "providers" : values,
+      }
+    )
   }
 
   const handleUseCaseChange = (values: string[]) => {
     setuseCases(values)
+    setFilterSelection(
+      {
+        ...filterData,
+        "useCases" : values,
+      }
+    )
+  }
+
+  const handleStorageChange = (value : number) => {
+    setStorage(value)
+    setFilterSelection(
+      {
+        ...filterData,
+        "minStorage" : value,
+      }
+    )
+  } 
+
+  const changeComputeSelection = (value: ComputeTypes) => {
+    setSelection(value)
+    setFilterSelection(
+      {
+        ...filterData,
+        "computeSelection" : value,
+      }
+    )
   }
 
   return (
@@ -131,11 +165,11 @@ export default function HorizontalFilterUI({providers, usecases}) {
             </Text>
             <Slider
               aria-label="price-range-slider"
-              defaultValue={50}
+              defaultValue={0}
               min={0}
-              max={100}
+              max={maxStorage}
               step={1}
-              onChange={(val) => setStorage(val)}
+              onChange={(val) => handleStorageChange(val)}
             >
               <SliderTrack>
                 <SliderFilledTrack />
@@ -146,8 +180,8 @@ export default function HorizontalFilterUI({providers, usecases}) {
         </Flex>
 
         <Stack isInline spacing={4}>
-        <SelectionIconButton text='GPU' icon={BsGpuCard}  />
-        <SelectionIconButton text='CPU' icon={FaServer} />
+        <SelectionIconButton text='GPU' icon={BsGpuCard} onClick={() => changeComputeSelection(ComputeTypes.GPU)} isActive={ComputeTypes.GPU==currentSelection} />
+        <SelectionIconButton text='CPU' icon={FaServer} onClick={() => changeComputeSelection(ComputeTypes.CPU)} isActive={ComputeTypes.CPU==currentSelection}/>
         {/* <Box flex="1" width="sm">
             <Text mb={2} fontWeight="bold">
               Price Range: ${priceRange}
