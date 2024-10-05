@@ -56,9 +56,9 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
     >
       <VStack align="stretch" spacing={3}>
       <HStack spacing={3}>
-          <Icon as={ resourceCard.computeType == ComputeTypes.GPU ? BsGpuCard : (resourceCard.computeType == ComputeTypes.STORAGE ? FaDatabase : FaServer)} boxSize={6} color="gray.400" />
+          <Icon as={ resourceCard.computeType == ComputeTypes.GPU ? BsGpuCard : (resourceCard.computeType == ComputeTypes.STORAGE ? FaDatabase : FaServer)} boxSize={6} color="white" />
           <VStack align="start" spacing={0}>
-            <Text fontWeight="bold" fontSize="lg">
+            <Text fontWeight="bold" fontSize="2xl" color="gray.300" align="center">
               {resourceCard.providerName}
             </Text>
             <Text fontSize="sm" color="gray.500">
@@ -68,47 +68,47 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
         </HStack>
         <VStack align="stretch" spacing={2}>
           <HStack justify="space-between">
-            <Text fontSize="sm" color="gray.400">
+            <Text fontSize="md" color="gray.400">
               Type
             </Text>
-            <Text fontSize="sm">{resourceCard.computeType == 1  ?  "GPU" : "CPU" }</Text>
+            <Text fontSize="md">{resourceCard.computeType == 1  ?  "GPU" : "CPU" }</Text>
           </HStack>
           <HStack justify="space-between">
-            <Text fontSize="sm" color="gray.400">
+            <Text fontSize="md" color="gray.400">
               Data Storage
             </Text>
-            <Text fontSize="sm">{resourceCard.storage}</Text>
+            <Text fontSize="md">{resourceCard.storage}</Text>
           </HStack>
           <HStack justify="space-between">
-            <Text fontSize="sm" color="gray.400">
+            <Text fontSize="md" color="gray.400">
               Memory
             </Text>
-            <Text fontSize="sm">{resourceCard.memory}</Text>
+            <Text fontSize="md">{resourceCard.memory}</Text>
           </HStack>
           <HStack justify="space-between">
-            <Text fontSize="sm" color="gray.400">
+            <Text fontSize="md" color="gray.400">
               Compute
             </Text>
-            <Text fontSize="sm">{resourceCard.compute}</Text>
+            <Text fontSize="md">{resourceCard.compute}</Text>
           </HStack>
           {/* <HStack justify="space-between">
-            <Text fontSize="sm" color="gray.400">
+            <Text fontSize="md" color="gray.400">
             Use Cases
             </Text>
-            <Text fontSize="sm">{resourceCard.usecases.map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize first letter
+            <Text fontSize="md">{resourceCard.usecases.map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize first letter
     .join(', ')}</Text>
           </HStack> */}
           <HStack justify="space-between">
-            <Text fontSize="sm" color="gray.400" >
+            <Text fontSize="md" color="gray.400" >
               Python Version
             </Text>
-            <Text fontSize="sm">{resourceCard.pythonVersion}</Text>
+            <Text fontSize="md">{resourceCard.pythonVersion}</Text>
           </HStack>
           {/* <HStack justify="space-between">
-            <Text fontSize="sm" color="#4ade80" >
+            <Text fontSize="md" color="#4ade80" >
               Python Version
             </Text>
-            <Text fontSize="sm" color="#53df53">{resourceCard.pythonVersion}</Text>
+            <Text fontSize="md" color="#53df53">{resourceCard.pythonVersion}</Text>
           </HStack> */}
         </VStack>
         <div className="mt-6">
@@ -126,7 +126,7 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
 
       <Modal isOpen={isOpen} onClose={onClose} size="lg" isCentered>
         <ModalOverlay />
-        <ModalContent backgroundColor="black" border="3px solid lightgreen">
+        <ModalContent backgroundColor="black" border="3px solid #4ade80">
           <ModalHeader>{resourceCard.providerName} - Details</ModalHeader>
           <ModalCloseButton />
           <ModalBody >

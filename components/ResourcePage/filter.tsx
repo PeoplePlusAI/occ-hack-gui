@@ -109,12 +109,12 @@ export default function HorizontalFilterUI({providers, usecases=null, setFilterS
               Providers:
             </Text>
             <Menu closeOnSelect={false}>
-              <MenuButton as={Button} rightIcon={<ChevronDownIcon />} width="100%" border="3px solid forestgreen" bgColor="black" _hover={{ bg: useColorModeValue("gray.700", "gray.700") }} _active={{bg: useColorModeValue("gray.700", "gray.700")}}>
+              <MenuButton as={Button} rightIcon={<ChevronDownIcon />} width="100%" border="3px solid #4ade80" bgColor="black" _hover={{ bg: useColorModeValue("gray.700", "gray.700") }} _active={{bg: useColorModeValue("gray.700", "gray.700")}}>
                 {selectedCategories.length > 0 
                   ? `${selectedCategories.length} selected`
                   : 'Select Providers'}
               </MenuButton>
-              <MenuList border="1px solid forestgreen" bgColor="black" zIndex="5">
+              <MenuList border="1px solid #4ade80" bgColor="black" zIndex="5">
                 <MenuOptionGroup type="checkbox" onChange={(values) => handleCategoryChange(values as string[])} >
                   {providers.map((category) => (
                     <MenuItemOption key={category} value={category} _focus={{bg: useColorModeValue("blue.700", "blue.700")}}>
@@ -130,13 +130,13 @@ export default function HorizontalFilterUI({providers, usecases=null, setFilterS
             <Text mb={2} fontWeight="bold" color="white">
               Use Cases
             </Text>
-            <Menu closeOnSelect={false} border-color="forestgreen">
-              <MenuButton as={Button}  rightIcon={<ChevronDownIcon />} width="100%" border="3px solid forestgreen" bgColor="black" _hover={{ bg: useColorModeValue("gray.700", "gray.700") }} _active={{bg: useColorModeValue("gray.700", "gray.700")}}>
+            <Menu closeOnSelect={false} border-color="#4ade80">
+              <MenuButton as={Button}  rightIcon={<ChevronDownIcon />} width="100%" border="3px solid #4ade80" bgColor="black" _hover={{ bg: useColorModeValue("gray.700", "gray.700") }} _active={{bg: useColorModeValue("gray.700", "gray.700")}}>
                 {useCases.length > 0 
                   ? `${useCases.length} selected`
                   : 'Select Use Cases'}
               </MenuButton>
-              <MenuList border="1px solid forestgreen" bgColor="black" zIndex="2" overflowY={"scroll"} maxHeight={"40vh"} css={{
+              <MenuList border="1px solid #4ade80" bgColor="black" zIndex="2" overflowY={"scroll"} maxHeight={"40vh"} css={{
       "&::-webkit-scrollbar": {
         width: "6px",
       },

@@ -1,4 +1,4 @@
-import {ComputeTypes} from '../../components/ResourcePage/resourceCard';
+import {ComputeTypes} from '../../components/ResourcePage/resouceCardModal';
 
 function formatData(item) {
   return {
