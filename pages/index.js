@@ -4,6 +4,7 @@ import Introduction from '../components/HomePage/Introduction'
 import OCCPartners from '../components/HomePage/partners'
 import YoutubeVideo from '../components/HomePage/YoutubeVideo'
 import FeaturedArticles from '../components/HomePage/FeaturedArticles'
+import Countdown from '../components/HomePage/Countdown'
 export default function Index({ introduction }) {
   
   return (
@@ -21,6 +22,7 @@ export default function Index({ introduction }) {
           <br />
           <Introduction introduction={introduction} />
           <br />
+          <Countdown targetDate="2024-12-31T23:59:59" />
           <OCCPartners />
           <YoutubeVideo /> 
           <FeaturedArticles />

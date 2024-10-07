@@ -87,9 +87,8 @@ export default function Introduction({ introduction }) {
           whiteSpace="pre-wrap"
         >
           <Box as="span" color="displayColor">
-          Micro
-          </Box>{' '}
-           is the new mega
+          For Developers
+          </Box>
         </Heading>
       </SlideFade>
     </Stack>

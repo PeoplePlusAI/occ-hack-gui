@@ -142,12 +142,13 @@ export default function Navbar({ enableTransition }) {
           variant="unstyled"
           display="flex"
           alignItems="center"
-          _hover={{ opacity: 0.8 }}
+          _hover={{ opacity: 0.8}}
+          my={3}
         >
           <Image
             src="/OCCLogo.png?height=90&width=90"
             alt="Logo"
-            boxSize="150px"
+            boxSize="200px"
             objectFit="contain"
           />
         </Button>

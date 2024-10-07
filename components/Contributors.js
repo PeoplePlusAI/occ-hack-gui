@@ -24,7 +24,7 @@ export default function Contributors() {
     <Box as="section" py={12} bg="black" display="flex" alignItems="center" alignSelf='center'>
       <VStack spacing={12} width="full">
         <Heading as="h2" size="xl" textAlign="center" color="white" alignItems="center">
-          Contributors
+        Team Members
         </Heading>
         <SimpleGrid columns={{ sm: 2, md: 3 }} spacing={24} >
           {contributors.map((contributor) => (
