@@ -56,9 +56,9 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
     >
       <VStack align="stretch" spacing={3}>
       <HStack spacing={3}>
-          <Icon as={ resourceCard.computeType == ComputeTypes.GPU ? BsGpuCard : (resourceCard.computeType == ComputeTypes.STORAGE ? FaDatabase : FaServer)} boxSize={6} color="white" />
+          <Icon as={ resourceCard.computeType == ComputeTypes.GPU ? BsGpuCard : (resourceCard.computeType == ComputeTypes.STORAGE ? FaDatabase : FaServer)} boxSize={8} color="white" />
           <VStack align="start" spacing={0}>
-            <Text fontWeight="bold" fontSize="2xl" color="gray.400" align="center">
+            <Text fontWeight="bold" fontSize="3xl" color="gray.400" align="center">
               {resourceCard.providerName}
             </Text>
             <Text fontSize="sm" color="gray.500">

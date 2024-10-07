@@ -15,7 +15,7 @@ import {
   DrawerHeader,
   DrawerBody,
   Stack,
-  Icon, Image
+  Icon, Image, useColorModeValue
 } from '@chakra-ui/react'
 import OCCLogo from '/public/OCCLogo.png'
 import NextLink from 'next/link'
@@ -81,8 +81,8 @@ export default function Navbar({ enableTransition }) {
                   About Us
                 </Button>
               </NextLink>
-              <NextLink passHref href="/blog">
-                <Button as="a" fontSize="16px" variant="ghost">
+              <NextLink passHref href="/blog" >
+                <Button as="a" fontSize="16px" variant="ghost" _hover={{"bg" : "pink"}}>
                   Blog
                 </Button>
               </NextLink>
