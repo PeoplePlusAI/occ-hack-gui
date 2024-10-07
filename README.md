@@ -23,11 +23,11 @@ Also add the `GITHUB_ID` and `GITHUB_REPO` to the `.env`
 You can find the steps to publish a blog on the website in the BlogTemplate Folder.
 
 ## Overview of the project
-`pages/index.js`: Homepage of the frontend 
-`pages/resources/index.js` : Resource Page
-`pages/about/index.js` : About Page
-`pages/blog/index.js` : Blog Listing page  
-`pages/blog/[slug].js` : Blog post page   
+1. `pages/index.js`: Homepage of the frontend 
+2. `pages/resources/index.js` : Resource Page
+3. `pages/about/index.js` : About Page
+4. `pages/blog/index.js` : Blog Listing page  
+5. `pages/blog/[slug].js` : Blog post page   
 
 ## Tech Stack Used
 - Next.js
