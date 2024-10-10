@@ -21,14 +21,16 @@ import {
 } from '@chakra-ui/react'
 
 const team = [
-  { srno: 1, name: 'John Doe', role:'Developer' },
-  { srno: 2, name: 'John Doe', role:'Developer' },
-  { srno: 3, name: 'John Doe', role:'Developer' },
-  { srno: 4, name: 'John Doe', role:'Developer' },
-  { srno: 5, name: 'John Doe', role:'Developer' },
-  { srno: 6, name: 'John Doe', role:'Developer' },
-  { srno: 7, name: 'John Doe', role:'Developer' },
-  { srno: 8, name: 'John Doe', role:'Developer' },
+  { srno: 1, name: 'Ashish Sharma', role:'Mentor' },
+  { srno: 2, name: 'Prasanna Kakhandaki', role:'Mentor' },
+  { srno: 3, name: 'Manu Awasthi', role:'Mentor' },
+  { srno: 4, name: 'Shiva Kumar R V', role:'Developer' },
+  { srno: 5, name: 'Anurag', role:'Developer' },
+  { srno: 6, name: 'Abhishek', role:'Developer' },
+  { srno: 7, name: 'Saket Sultania', role:'Developer' },
+  { srno: 8, name: 'Shreya Mandi', role:'Developer' },
+  { srno: 9, name: 'Arpit Sureka', role:'Developer' },
+  { srno: 10, name: 'Vighnesh Deshpande', role:'Developer' },
   // { name: 'Partner 3', logo: '/logos/partner3.png' },
 ]
 

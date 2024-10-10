@@ -12,8 +12,8 @@ interface Partner {
 }
 
 const partners: Partner[] = [
-  { name: 'Jarvis Labs', logo: '/FrontendAssets/Providers/Jarvislabs_logo1.svg' },
-  { name: 'Vigyan Labs', logo: '/FrontendAssets/Providers/VLLogo.png' },
+  { name: 'Jarvislabs AI', logo: '/FrontendAssets/Providers/Jarvislabs_logo1.svg' },
+  { name: 'Vigyanlabs', logo: '/FrontendAssets/Providers/VLLogo.png' },
   // { name: 'Partner 3', logo: '/logos/partner3.png' },
 ]
 
@@ -35,7 +35,7 @@ export default function OCCPartners() {
                 height={["160px", "180px"]}
                 fallbackSrc="/placeholder.png"
               />
-              <Center>{partner.name}</Center>
+              <Center fontSize={"2xl"}>{partner.name}</Center>
             </Box>
           ))}
         </Flex>
