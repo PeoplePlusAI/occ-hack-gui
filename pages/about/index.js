@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Stack, Heading, Text,Image,Flex,Box } from '@chakra-ui/react'
 import Container from '../../components/Container'
 import useMediaQuery from '../../hook/useMediaQuery'
-import Contributors from '../../components/Contributors' 
+import TeamMembers from '../../components/TeamMembers' 
 export default function About() {
 
     const [currentSelection, setSelection] = useState();
@@ -21,7 +21,7 @@ export default function About() {
             <Heading color="displayColor" fontSize={{ base: '4xl', md: '6xl' }}>
               About Us
             </Heading>
-            <Flex justifyContent="space-between" alignItems="center" width="full" px={4}>
+            <Flex justifyContent="space-between" alignItems="center" width="full" px={4} direction={{ base: 'column', md: 'row' }}>
             <Text fontSize={{ base: '16px', md: '20px' }} mr={10} width={'75%'}>
             Open Cloud Compute (OCC) is an initiative launched by the EkStep Foundation in India to create a decentralized and interoperable cloud computing network. We aim to connect independent micro data centers, enhancing access to computing resources while promoting local data sovereignty. By fostering competition among smaller providers, we seeks to democratize cloud services, making them more accessible and affordable for businesses of all sizes.
             </Text>
@@ -52,7 +52,7 @@ export default function About() {
             />
             </Box>
             </Flex>
-            <Contributors />
+            <TeamMembers />
             
           </Stack>
           

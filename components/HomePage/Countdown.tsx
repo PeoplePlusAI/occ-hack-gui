@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import { Box, Text, VStack, HStack } from '@chakra-ui/react'
+import { Box, Text, VStack, HStack,Image,Flex } from '@chakra-ui/react'
 
 interface TimeLeft {
   days: number
@@ -36,27 +36,41 @@ export default function CountdownTimer({ targetDate }: { targetDate: string }) {
   }, [targetDate])
 
   return (
-    <Box p={10} borderWidth={1} borderRadius="lg" as="section" py={12}  display="flex" alignItems="center" alignSelf='center' >
-      <VStack>
-        <Text fontSize="4xl" fontWeight="bold">Countdown to Open Coud Compute PES Hackathon</Text>
-        <HStack spacing={4}>
+    <Box p={10} borderWidth={1} borderRadius="lg" as="section" py={12}  display="flex" alignItems="center" alignSelf='center' width="80vw">
+      <VStack justifyContent={"space-between"}>
+        
+        <Flex direction={{base: 'column', md: 'row'}} justifyContent={{base: 'start', md: 'space-around'}} width="80vw" alignItems={{base: 'flex-start', md: 'center'}}>
+        <VStack width={"75%"} alignItems={"start"}>
+        <Text fontSize="3xl" fontWeight="bold">The OCC team presents its first Hackathon in partnership with PES University, Electronic City Campus</Text>
+        <Text fontSize="2xl" fontWeight="bold">Countdown to the Hackathon</Text>
+        <HStack spacing={10} color={"button1"}>
           <VStack>
-            <Text fontSize="5xl" fontWeight="bold">{timeLeft.days}</Text>
-            <Text fontSize="xl">Days</Text>
+            <Text fontSize={{base: '3xl', md: '6xl'}} fontWeight="bold">{timeLeft.days}</Text>
+            <Text fontSize={{base: 'lg', md: 'xl'}}>Days</Text>
           </VStack>
           <VStack>
-            <Text fontSize="5xl" fontWeight="bold">{timeLeft.hours}</Text>
-            <Text fontSize="xl">Hours</Text>
+            <Text fontSize={{base: '3xl', md: '6xl'}} fontWeight="bold">{timeLeft.hours}</Text>
+            <Text fontSize={{base: 'lg', md: 'xl'}}>Hours</Text>
           </VStack>
           <VStack>
-            <Text fontSize="5xl" fontWeight="bold">{timeLeft.minutes}</Text>
-            <Text fontSize="xl">Minutes</Text>
+            <Text fontSize={{base: '3xl', md: '6xl'}} fontWeight="bold">{timeLeft.minutes}</Text>
+            <Text fontSize={{base: 'lg', md: 'xl'}}>Minutes</Text>
           </VStack>
           <VStack>
-            <Text fontSize="5xl" fontWeight="bold">{timeLeft.seconds}</Text>
-            <Text fontSize="xl">Seconds</Text>
+            <Text fontSize={{base: '3xl', md: '6xl'}} fontWeight="bold">{timeLeft.seconds}</Text>
+            <Text fontSize={{base: 'lg', md: 'xl'}}>Seconds</Text>
           </VStack>
         </HStack>
+        </VStack>
+        <Image
+          src={'/PESlogo.png'}
+          alt={`pes logo`}
+          width="300px"
+          height="300px"
+          borderRadius="full"
+          fallbackSrc="/placeholder.png"
+        />
+        </Flex>
       </VStack>
     </Box>
   )
