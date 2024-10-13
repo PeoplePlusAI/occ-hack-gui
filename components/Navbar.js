@@ -67,22 +67,22 @@ export default function Navbar({ enableTransition }) {
           <DrawerBody>
             <Stack spacing="24px">
               <NextLink passHref href="/">
-                <Button as="a" fontSize="16px" variant="ghost">
+                <Button as="a" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
                   Home
                 </Button>
               </NextLink>
               <NextLink passHref href="/resources">
-                <Button as="a" fontSize="16px" variant="ghost">
+                <Button as="a" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
                   Resources
                 </Button>
               </NextLink>
               <NextLink passHref href="/about">
-                <Button as="a" fontSize="16px" variant="ghost">
+                <Button as="a" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
                   About Us
                 </Button>
               </NextLink>
               <NextLink passHref href="/blog" >
-                <Button as="a" fontSize="16px" variant="ghost" _hover={{"bg" : "pink"}}>
+                <Button as="a" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
                   Blog
                 </Button>
               </NextLink>
@@ -91,7 +91,7 @@ export default function Navbar({ enableTransition }) {
                   Projects
                 </Button>
               </NextLink> */}
-              <NextLink passHref href="/blog">
+              <NextLink passHref href="/blog" _hover={{ bg: "white", color: "black" }}>
                 <Button as="a" fontSize="16px" variant="ghost">
                   Blog
                 </Button>
@@ -158,17 +158,17 @@ export default function Navbar({ enableTransition }) {
           {isLargerThan768 ? (
             <Box mr={7} color="displayColor">
               <NextLink passHref href="/">
-                <Button as="a" p="4" fontSize="16px" variant="ghost">
+                <Button as="a" p="4" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
                   Home
                 </Button>
               </NextLink>
               <NextLink passHref href="/resources">
-                <Button as="a" p="4" fontSize="16px" variant="ghost">
+                <Button as="a" p="4" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
                   Resources
                 </Button>
               </NextLink>
               <NextLink passHref href="/about">
-                <Button as="a" p="4" fontSize="16px" variant="ghost">
+                <Button as="a" p="4" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
                   About Us
                 </Button>
               </NextLink>
@@ -178,7 +178,7 @@ export default function Navbar({ enableTransition }) {
                 </Button>
               </NextLink> */}
               <NextLink passHref href="/blog">
-                <Button as="a" p="4" fontSize="16px" variant="ghost">
+                <Button as="a" p="4" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
                   Blog
                 </Button>
               </NextLink>{' '}

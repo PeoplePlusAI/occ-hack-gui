@@ -5,17 +5,21 @@ import HorizontalFilterUI from '../../components/ResourcePage/filter'
 import Container from '../../components/Container'
 import {fetchDataFromAPI} from '../api/resourceApi'
 import customTheme from '../../styles/theme'
-import {getProvidersList, getUseCasesList, getMaximumStorage, applyFilter} from '../../utils/resourcePage'
+import {getProvidersList, getUseCasesList, getMaximumStorage, applyFilter} from '../../utils/resourcePageUtils'
 import { Spinner } from '@chakra-ui/react'
 
-export default function Resources({ projects }) {
+const cleanFilters = {
+  "useCases" : [],
+  "minStorage" : 0,
+  "providers" : [],
+  "computeSelection" : null,
+  "search" : "",
+  "dvdfvdver" : "Dfvdvrvgr"
+};
 
-    const [currentFilters, setFilters] = useState({
-      "useCases" : [],
-      "minStorage" : 0,
-      "providers" : [],
-      "computeSelection" : null
-    });
+export default function Resources({}) {
+
+    const [currentFilters, setFilters] = useState({...cleanFilters});
     const [ResourceCardList, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -36,7 +40,6 @@ export default function Resources({ projects }) {
           setError(error.message);  // Set error if any occurs
         }
       };
-
       fetchData();  // Invoke the fetch function when the component mounts
     }, []);  // Empty array ensures this runs only once on mount
 
@@ -54,7 +57,7 @@ export default function Resources({ projects }) {
             <Heading color="displayColor" fontSize={{ base: '4xl', md: '6xl' }}>
               Resources
             </Heading>
-      <HorizontalFilterUI theme={customTheme} providers={providersDropdown} usecases={usecasesDropdown} setFilterSelection={setFilters} filterData={currentFilters} maxStorage={maxStroage}/>
+      <HorizontalFilterUI theme={customTheme} providers={providersDropdown} usecases={usecasesDropdown} setFilterSelection={setFilters} filterData={currentFilters} maxStorage={maxStroage} cleanFilters={cleanFilters}/>
             <Divider thickness="100px"/>
           </Stack>
           <HStack>
