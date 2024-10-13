@@ -53,6 +53,7 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
       minW="16.5em"
       borderColor="blue.200"
       onClick={onOpen}
+      _hover={{ cursor: "pointer" }}
     >
       <VStack align="stretch" spacing={3}>
       <HStack spacing={3}>
