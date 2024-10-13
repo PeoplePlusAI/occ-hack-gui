@@ -7,6 +7,7 @@ import {fetchDataFromAPI} from '../api/resourceApi'
 import customTheme from '../../styles/theme'
 import {getProvidersList, getUseCasesList, getMaximumStorage, applyFilter} from '../../utils/resourcePageUtils'
 import { Spinner } from '@chakra-ui/react'
+import Header from '../../components/Header'
 
 const cleanFilters = {
   "useCases" : [],
@@ -46,6 +47,7 @@ export default function Resources({}) {
   
   return (
     <>
+      <Header title="Resources - OCC"/>
       <Container>
         <Stack
           justifyContent="center"
