@@ -27,9 +27,6 @@ const applyFilter = (data, filterData) => {
 
     if(filterData["computeSelection"] !=null && filterData["computeSelection"] != data["computeType"] ) return false;
 
-    console.log(filterData)
-    console.log(data)
-
     if(filterData["minStorage"] > Number(data["storage"].slice(0,-2))) return false;
 
     if(filterData["providers"].length != 0 && !filterData["providers"].includes(data["providerName"])) return false;
