@@ -30,7 +30,7 @@ export default function Index({ introduction }) {
           <OCCPartners />
           <YoutubeVideo /> 
           <Box display="flex" justifyContent="center" as='section' alignItems="center" alignSelf='center'>
-          <Button width={"400px"} height={"100px"} backgroundColor={'button1'} onClick={() => window.open('https://peopleplus.ai/occ', '_blank')} variant='solid'>
+          <Button width={"400px"} height={"100px"} backgroundColor={'button1'} onClick={() => window.open('https://peopleplus.ai/occ', '_blank')} variant='solid' _hover={{ bg: "white", color: "button1" }}>
             <Text fontSize={"2xl"}> Visit the OCC Website</Text>
           </Button>
           </Box>
