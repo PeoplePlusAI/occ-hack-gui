@@ -8,11 +8,13 @@ import OCCPartners from '../components/HomePage/partners'
 import YoutubeVideo from '../components/HomePage/YoutubeVideo'
 import FeaturedArticles from '../components/HomePage/FeaturedArticles'
 import Countdown from '../components/HomePage/Countdown'
+import Header from '../components/Header'
 
 export default function Index({ introduction }) {
   
   return (
     <>
+      <Header />
       <Container enableTransition={true} >
         <Stack
           as="main"

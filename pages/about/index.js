@@ -3,6 +3,8 @@ import { Stack, Heading, Text,Image,Flex,Box } from '@chakra-ui/react'
 import Container from '../../components/Container'
 import useMediaQuery from '../../hook/useMediaQuery'
 import TeamMembers from '../../components/TeamMembers' 
+import Header from '../../components/Header'
+
 export default function About() {
 
     const [currentSelection, setSelection] = useState();
@@ -10,6 +12,7 @@ export default function About() {
 
   return (
     <>
+      <Header title="About Us - OCC" />
       <Container>
         <Stack
           justifyContent="center"

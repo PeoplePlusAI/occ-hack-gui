@@ -7,6 +7,7 @@ import { FaSearch } from 'react-icons/fa'
 import { Input, InputGroup, InputRightElement } from '@chakra-ui/input'
 import useMediaQuery from '../../hook/useMediaQuery'
 import dateFormat from 'dateformat'
+import Header from '../../components/Header'
 
 import { GithubBlog } from '@rena.to/github-blog'
 
@@ -17,11 +18,7 @@ export default function Index({ posts }) {
 
   return (
     <Container>
-      <Head>
-        <title>OCC Blogs</title>
-        <meta content="Blog - OCC Blog" name="title" />
-        
-      </Head>
+      <Header title="Blog - OCC Blog"/>
       <Stack
         as="main"
         alignItems="flex-start"
