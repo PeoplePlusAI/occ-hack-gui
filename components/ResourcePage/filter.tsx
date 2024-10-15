@@ -100,7 +100,7 @@ export default function HorizontalFilterUI({ providers, usecases = null, setFilt
             <Text mb={2} fontWeight="bold">
               Search:
             </Text>
-            <Input placeholder="(Not working) Search products..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} aria-label="Search products" outline="1px solid"/>
+            <Input placeholder="Search products..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} aria-label="Search products" outline="1px solid"/>
           </Box>
 
           <Box flex="1">

@@ -1,5 +1,7 @@
 import {ComputeTypes} from '../../components/ResourcePage/resouceCardModal';
 
+const API_URL = process.env.RESOURCE_API_URL;
+
 function formatData(item) {
   return {
     resourceType: item["resourceType"],
@@ -37,7 +39,7 @@ function resourceFomat(item) {
 
 export const fetchDataFromAPI = async () => {
   try {
-    const response = await fetch('http://127.0.0.1:8000/discover/discover_resources'); // Replace with your API URL
+    const response = await fetch(API_URL); // Replace with your API URL
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

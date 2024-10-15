@@ -15,7 +15,6 @@ const cleanFilters = {
   "providers" : [],
   "computeSelection" : null,
   "search" : "",
-  "dvdfvdver" : "Dfvdvrvgr"
 };
 
 export default function Resources({}) {
