@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Step 7: Start the app in development mode
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "dev"]
