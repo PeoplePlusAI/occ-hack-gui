@@ -1,8 +1,3 @@
-/* eslint-disable chakra-ui/require-specific-component */
-/* eslint-disable chakra-ui/props-shorthand */
-/* eslint-disable chakra-ui/props-order */
-
-
 import React from 'react'
 import {
   Table,
@@ -17,7 +12,8 @@ import {
   Heading,
   Text,
   Box,
-  VStack
+  VStack,
+  Flex
 } from '@chakra-ui/react'
 
 const team = [
@@ -36,13 +32,13 @@ const team = [
 
 export default function TeamMembers() {
   return (
-    <Box  py={12} bg="black"  display="flex" alignItems="center" justifyContent="center" >
-      <VStack spacing={12} width="full">
-        <Heading as="h2" size="xl" textAlign="center" color="white" alignItems="center">
+    <Flex  align="center" justify="center"  py={12} bg="black" >
+      <VStack w="full" spacing={12}>
+        <Heading as="h2" alignItems="center" color="white" textAlign="center" size="xl">
         Team Members
         </Heading>
-        <TableContainer width="100vw">
-          <Table size='lg' width="100%">
+        <TableContainer w="100vw">
+          <Table w="100%" size='lg'>
             <Thead>
               <Tr>
                 <Th><Text color={"white"}>Sr No:</Text></Th>
@@ -62,6 +58,6 @@ export default function TeamMembers() {
           </Table>
         </TableContainer>
       </VStack>
-    </Box>
+    </Flex>
   )
 }

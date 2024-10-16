@@ -1,7 +1,4 @@
-/* eslint-disable chakra-ui/require-specific-component */
-/* eslint-disable chakra-ui/props-shorthand */
-/* eslint-disable chakra-ui/props-order */
-import { Stack,Button,Box,Text } from '@chakra-ui/react'
+import { Stack,Button,Box,Text, Flex } from '@chakra-ui/react'
 import Container from '../components/Container'
 import Introduction from '../components/HomePage/Introduction'
 import OCCPartners from '../components/HomePage/partners'
@@ -31,11 +28,11 @@ export default function Index({ introduction }) {
           <Countdown targetDate="2024-10-20T00:00:00" />
           <OCCPartners />
           <YoutubeVideo /> 
-          <Box display="flex" justifyContent="center" as='section' alignItems="center" alignSelf='center'>
-          <Button width={"400px"} height={"100px"} backgroundColor={'button1'} onClick={() => window.open('https://peopleplus.ai/occ', '_blank')} variant='solid' _hover={{ bg: "white", color: "button1" }}>
+          <Flex as='section' align="center" justify="center" alignSelf='center'>
+          <Button w={"400px"} h={"100px"} _hover={{ bg: "white", color: "button1" }} bgColor={'button1'} onClick={() => window.open('https://peopleplus.ai/occ', '_blank')} variant='solid'>
             <Text fontSize={"2xl"}> Visit the OCC Website</Text>
           </Button>
-          </Box>
+          </Flex>
           
           {/* <FeaturedArticles /> */}
         </Stack>

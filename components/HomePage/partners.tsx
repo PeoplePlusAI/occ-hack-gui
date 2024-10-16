@@ -1,8 +1,3 @@
-/* eslint-disable chakra-ui/require-specific-component */
-/* eslint-disable chakra-ui/props-shorthand */
-/* eslint-disable chakra-ui/props-order */
-
-
 import React from 'react'
 import { Box, Flex, Image, Heading, Center, VStack } from '@chakra-ui/react'
 
@@ -19,27 +14,27 @@ const partners: Partner[] = [
 
 export default function OCCPartners() {
   return (
-    <Box as="section" py={12} bg="black" display="flex" alignItems="center" alignSelf='center'>
-      <VStack spacing={12} width="full">
-        <Heading as="h2" size="xl" textAlign="center" color="white" alignItems="center">
+    <Flex as="section" align="center" alignSelf='center' py={12} bg="black">
+      <VStack w="full" spacing={12}>
+        <Heading as="h2" alignItems="center" color="white" textAlign="center" size="xl">
           OCC PARTNERS
         </Heading>
-        <Flex justifyContent="center" alignItems="center" width="full" px={4}>
+        <Flex align="center" justify="center" w="full" px={4}>
           {partners.map((partner) => (
-            <Box key={partner.name} width={["33%", "25%", "20%"]} maxWidth="800px" mx={5}>
+            <Box key={partner.name} w={["33%", "25%", "20%"]} maxW="800px" mx={5}>
               <Image
-                src={partner.logo}
-                alt={`${partner.name} logo`}
+                w="100%"
+                h={["160px", "180px"]}
                 objectFit="contain"
-                width="100%"
-                height={["160px", "180px"]}
+                alt={`${partner.name} logo`}
                 fallbackSrc="/placeholder.png"
+                src={partner.logo}
               />
               <Center fontSize={"2xl"}>{partner.name}</Center>
             </Box>
           ))}
         </Flex>
       </VStack>
-    </Box>
+    </Flex>
   )
 }
