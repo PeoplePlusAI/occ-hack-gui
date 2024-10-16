@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000" # Expose your app on localhost:3000
+    volumes:
+      - .:/app      # Sync the current directory with the /app directory in the container
+      - /app/node_modules  # Exclude node_modules to avoid issues with host vs container file systems
+    environment:
+      - NODE_ENV=development # Set the environment to development
+    stdin_open: true  # Keep the container open
+    tty: true         # Enable a terminal for debugging

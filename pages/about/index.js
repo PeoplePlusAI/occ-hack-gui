@@ -24,13 +24,13 @@ export default function About() {
             <Heading color="displayColor" fontSize={{ base: '4xl', md: '6xl' }}>
               About Us
             </Heading>
-            <Flex justifyContent="space-between" alignItems="center" width="full" px={4} direction={{ base: 'column', md: 'row' }}>
-            <Text fontSize={{ base: '16px', md: '20px' }} mr={10} width={'75%'}>
+            <Flex align="center" justify="space-between" direction={{ base: 'column', md: 'row' }} w="full" px={4}>
+            <Text w={'75%'} mr={10} fontSize={{ base: '16px', md: '20px' }}>
             Open Cloud Compute (OCC) is an initiative launched by the EkStep Foundation in India to create a decentralized and interoperable cloud computing network. We aim to connect independent micro data centers, enhancing access to computing resources while promoting local data sovereignty. By fostering competition among smaller providers, we seeks to democratize cloud services, making them more accessible and affordable for businesses of all sizes.
             </Text>
             <Box
-            position="relative"
-            width="fit-content"
+            pos="relative"
+            w="fit-content"
             _before={{
                 content: '""',
                 position: "absolute",
@@ -44,14 +44,14 @@ export default function About() {
             }}
             >
             <Image
-            src='/AboutOCC.jpeg'
-            alt={` logo`}
-            boxSize="270px"
-            objectFit="cover"
-            borderRadius="lg"
-            position="relative"
-            fallbackSrc="/placeholder.png" 
+            pos="relative"
             zIndex={1}
+            boxSize="270px"
+            borderRadius="lg"
+            objectFit="cover"
+            alt={` logo`}
+            fallbackSrc="/placeholder.png" 
+            src='/AboutOCC.jpeg'
             />
             </Box>
             </Flex>
