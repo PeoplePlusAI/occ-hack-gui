@@ -96,12 +96,12 @@ export default function HorizontalFilterUI({ providers, usecases = null, setFilt
         </Heading> */}
 
         <Flex direction={{ base: "column", md: "row" }} gap={4} alignItems="flex-start">
-          <Box flex="1">
+          {/* <Box flex="1">
             <Text mb={2} fontWeight="bold">
               Search:
             </Text>
             <Input placeholder="Search products..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} aria-label="Search products" outline="1px solid"/>
-          </Box>
+          </Box> */}
 
           <Box flex="1">
             <Text mb={2} fontWeight="bold">
