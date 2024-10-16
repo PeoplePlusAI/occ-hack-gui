@@ -37,7 +37,7 @@ export default function HorizontalFilterUI({ providers, usecases = null, setFilt
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const [useCases, setuseCases] = useState<string[]>([])
   // const [priceRange, setPriceRange] = useState(50)
-  const [currentSelection, setSelection] = useState()
+  const [currentSelection, setSelection] = useState<ComputeTypes | undefined>(undefined);
   const [storage, setStorage] = useState(0)
 
   const handleCategoryChange = (values: string[]) => {

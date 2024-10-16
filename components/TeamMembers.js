@@ -51,8 +51,8 @@ export default function TeamMembers() {
               </Tr>
             </Thead>
             <Tbody>
-              {team.map((member) => (
-                <Tr>
+              {team.map((member, index) => (
+                <Tr key={index}>
                 <Td><Text fontSize={"20px"}>{member.srno}</Text></Td>
                 <Td><Text fontSize={"20px"}>{member.name}</Text></Td>
                 <Td><Text fontSize={"20px"}>{member.role}</Text></Td>
