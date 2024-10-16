@@ -7,7 +7,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   rules: {
-    'react/no-unescaped-entities': 'off',
+    'react/no-unescaped-entities': 'error',
     'chakra-ui/props-order': 'error',
     'chakra-ui/props-shorthand': 'error',
     'chakra-ui/require-specific-component': 'error',
