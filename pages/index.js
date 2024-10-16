@@ -1,4 +1,4 @@
-import { Stack,Button,Box,Text, Flex } from '@chakra-ui/react'
+import { Stack,Button,Box,Text, Flex,Link  } from '@chakra-ui/react'
 import Container from '../components/Container'
 import Introduction from '../components/HomePage/Introduction'
 import OCCPartners from '../components/HomePage/partners'
@@ -26,11 +26,18 @@ export default function Index({ introduction }) {
           <Introduction introduction={introduction} />
           <br />
           <Countdown targetDate="2024-10-20T00:00:00" />
+          <Flex as='section' align="center" justify="center" alignSelf='center' direction={"column"}>
+            <Text fontSize={"5xl"} fontWeight="medium">The List of Providers is now Live!</Text>
+          <Link href='/resources'><Button  h={100} mt={20}  bgColor={'button1'} variant='solid'>
+            <Text fontSize={{base:'md',md:"2xl"}} color="white" > Check the Compute instances available</Text>
+          </Button>
+          </Link>
+          </Flex>
           <OCCPartners />
           <YoutubeVideo /> 
           <Flex as='section' align="center" justify="center" alignSelf='center'>
-          <Button w={"400px"} h={"100px"} _hover={{ bg: "white", color: "button1" }} bgColor={'button1'} onClick={() => window.open('https://peopleplus.ai/occ', '_blank')} variant='solid'>
-            <Text fontSize={"2xl"}> Visit the OCC Website</Text>
+          <Button w={{base:300,md:400}} h={{base:70, md:100}} _hover={{ bg: "white", color: "button1" }} bgColor={'button1'} onClick={() => window.open('https://peopleplus.ai/occ', '_blank')} variant='solid'>
+            <Text fontSize={{base:'xl',md:'2xl'}} > Visit the OCC Website</Text>
           </Button>
           </Flex>
           
