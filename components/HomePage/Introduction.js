@@ -44,9 +44,9 @@ export default function Introduction({ introduction }) {
           </Image>
           <Image pos="absolute"
             zIndex={0}
-            display={{base:"none", lg:"block"}}
             top={{ base: '-150', md: '-10' }}
             right={{ base: '-4', md: '-50' }}
+            display={{base:"none", lg:"block"}}
             w={{ base: '300px', md: '400px' }}
             alt=""
             src="https://framerusercontent.com/images/M9s4txXkH3jzk9psUXH7UpLw7sU.png?scale-down-to=512">
