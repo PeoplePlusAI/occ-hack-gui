@@ -1,5 +1,3 @@
-/* eslint-disable chakra-ui/props-order */
-/* eslint-disable @next/next/no-img-element */
 import React, { useRef } from 'react'
 import {
   Button,
@@ -48,17 +46,17 @@ export default function Navbar({ enableTransition }) {
           <Flex align="center" mr={5}>
         <Button
           as="a"
+          alignItems="center"
+          display="flex"
+          _hover={{ opacity: 0.8 }}
           href="/"
           variant="unstyled"
-          display="flex"
-          alignItems="center"
-          _hover={{ opacity: 0.8 }}
         >
           <Image
-            src="public/logo.svg?height=40&width=40"
-            alt="Logo"
             boxSize="40px"
             objectFit="contain"
+            alt="Logo"
+            src="public/logo.svg?height=40&width=40"
           />
         </Button>
       </Flex>
@@ -67,22 +65,22 @@ export default function Navbar({ enableTransition }) {
           <DrawerBody>
             <Stack spacing="24px">
               <NextLink passHref href="/">
-                <Button as="a" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
+                <Button as="a" fontSize="16px" _hover={{ bg: "white", color: "black" }} variant="ghost">
                   Home
                 </Button>
               </NextLink>
               <NextLink passHref href="/resources">
-                <Button as="a" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
+                <Button as="a" fontSize="16px" _hover={{ bg: "white", color: "black" }} variant="ghost">
                   Resources
                 </Button>
               </NextLink>
               <NextLink passHref href="/about">
-                <Button as="a" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
+                <Button as="a" fontSize="16px" _hover={{ bg: "white", color: "black" }} variant="ghost">
                   About Us
                 </Button>
               </NextLink>
               <NextLink passHref href="/blog" >
-                <Button as="a" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
+                <Button as="a" fontSize="16px" _hover={{ bg: "white", color: "black" }} variant="ghost">
                   Blog
                 </Button>
               </NextLink>
@@ -138,18 +136,18 @@ export default function Navbar({ enableTransition }) {
               <Flex align="center" mr={5}>
         <Button
           as="a"
+          alignItems="center"
+          display="flex"
+          my={3}
+          _hover={{ opacity: 0.8}}
           href="/"
           variant="unstyled"
-          display="flex"
-          alignItems="center"
-          _hover={{ opacity: 0.8}}
-          my={3}
         >
           <Image
-            src="/OCCLogo.png?height=90&width=90"
-            alt="Logo"
             boxSize="200px"
             objectFit="contain"
+            alt="Logo"
+            src="/OCCLogo.png?height=90&width=90"
           />
         </Button>
       </Flex>
@@ -158,17 +156,17 @@ export default function Navbar({ enableTransition }) {
           {isLargerThan768 ? (
             <Box mr={7} color="displayColor">
               <NextLink passHref href="/">
-                <Button as="a" p="4" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
+                <Button as="a" p="4" fontSize="16px" _hover={{ bg: "white", color: "black" }} variant="ghost">
                   Home
                 </Button>
               </NextLink>
               <NextLink passHref href="/resources">
-                <Button as="a" p="4" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
+                <Button as="a" p="4" fontSize="16px" _hover={{ bg: "white", color: "black" }} variant="ghost">
                   Resources
                 </Button>
               </NextLink>
               <NextLink passHref href="/about">
-                <Button as="a" p="4" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
+                <Button as="a" p="4" fontSize="16px" _hover={{ bg: "white", color: "black" }} variant="ghost">
                   About Us
                 </Button>
               </NextLink>
@@ -178,7 +176,7 @@ export default function Navbar({ enableTransition }) {
                 </Button>
               </NextLink> */}
               <NextLink passHref href="/blog">
-                <Button as="a" p="4" fontSize="16px" variant="ghost" _hover={{ bg: "white", color: "black" }}>
+                <Button as="a" p="4" fontSize="16px" _hover={{ bg: "white", color: "black" }} variant="ghost">
                   Blog
                 </Button>
               </NextLink>{' '}

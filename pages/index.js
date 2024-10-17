@@ -26,10 +26,10 @@ export default function Index({ introduction }) {
           <Introduction introduction={introduction} />
           <br />
           <Countdown targetDate="2024-10-20T00:00:00" />
-          <Flex as='section' align="center" justify="center" alignSelf='center' direction={"column"}>
+          <Flex as='section' align="center" justify="center" direction={"column"} alignSelf='center'>
             <Text fontSize={"5xl"} fontWeight="medium">The List of Providers is now Live!</Text>
           <Link href='/resources'><Button  h={100} mt={20}  bgColor={'button1'} variant='solid'>
-            <Text fontSize={{base:'md',md:"2xl"}} color="white" > Check the Compute instances available</Text>
+            <Text color="white" fontSize={{base:'md',md:"2xl"}} > Check the Compute instances available</Text>
           </Button>
           </Link>
           </Flex>
