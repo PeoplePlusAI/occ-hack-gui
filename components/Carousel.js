@@ -52,8 +52,6 @@ function Carousel() {
   return (
     <ChakraProvider theme={extendTheme(theme)}>
       <Container
-        py={8}
-        px={0}
         maxW={{
           base: "100%",
           sm: "35rem",
@@ -62,6 +60,8 @@ function Carousel() {
           xl: "75rem",
           xxl: "87.5rem"
         }}
+        px={0}
+        py={8}
       >
         <ChakraCarousel gap={32}>
           {/* {data.slice(5, 15).map((post, index) => (

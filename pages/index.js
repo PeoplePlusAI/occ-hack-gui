@@ -27,11 +27,11 @@ export default function Index({ introduction }) {
           <Introduction introduction={introduction} />
           <br />
           <Countdown targetDate="2024-10-20T00:00:00" />
-          <Flex as='section' align="center" justify="center" alignSelf='center' direction={"column"}>
-            <Text fontSize={"5xl"} fontWeight="medium" mb={5}>The List of Providers is now Live!</Text>
+          <Flex as='section' align="center" justify="center" direction={"column"} alignSelf='center'>
+            <Text mb={5} fontSize={"5xl"} fontWeight="medium">The List of Providers is now Live!</Text>
             <Carousel />
-          <Link href='/resources'><Button  h={100} mt={5}  bgColor={'button1'} variant='solid' _hover={{bg:'buttonHover'}}>
-            <Text fontSize={{base:'md',md:"2xl"}} color="white" > Check all the compute available</Text>
+          <Link href='/resources'><Button  h={100} mt={5}  _hover={{bg:'buttonHover'}} bgColor={'button1'} variant='solid'>
+            <Text color="white" fontSize={{base:'md',md:"2xl"}} > Check all the compute available</Text>
           </Button>
           </Link>
           </Flex>

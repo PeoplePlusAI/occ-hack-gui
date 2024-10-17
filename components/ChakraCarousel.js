@@ -165,11 +165,11 @@ import React, {
       <>
         <Box
           ref={ref}
+          pos="relative"
+          overflow="hidden"
           w={{ base: "100%", md: `calc(100% + ${gap}px)` }}
           ml={{ base: 0, md: `-${gap / 2}px` }}
           px={`${gap / 2}px`}
-          position="relative"
-          overflow="hidden"
           _before={{
             bgGradient: "linear(to-r, base.d400, transparent)",
             position: "absolute",
@@ -194,40 +194,40 @@ import React, {
           {children}
         </Box>
   
-        <Flex w={`${itemWidth}px`} mt={`${gap / 2}px`} mx="auto">
+        <Flex w={`${itemWidth}px`} mx="auto" mt={`${gap / 2}px`}>
           <Button
-            onClick={handleDecrementClick}
-            onFocus={handleFocus}
+            minW={0}
             mr={`${gap / 3}px`}
             color="gray.200"
+            onClick={handleDecrementClick}
+            onFocus={handleFocus}
             variant="link"
-            minW={0}
           >
             <ChevronLeftIcon boxSize={9} />
           </Button>
   
           <Progress
-            value={percentage(activeItem, positions.length - constraint)}
-            alignSelf="center"
-            borderRadius="2px"
-            bg="base.d100"
-            flex={1}
-            h="3px"
             sx={{
               "> div": {
                 backgroundColor: "gray.400"
               }
             }}
+            flex={1}
+            alignSelf="center"
+            h="3px"
+            bg="base.d100"
+            borderRadius="2px"
+            value={percentage(activeItem, positions.length - constraint)}
           />
   
           <Button
-            onClick={handleIncrementClick}
-            onFocus={handleFocus}
-            ml={`${gap / 3}px`}
-            color="gray.200"
-            variant="link"
             zIndex={2}
             minW={0}
+            ml={`${gap / 3}px`}
+            color="gray.200"
+            onClick={handleIncrementClick}
+            onFocus={handleFocus}
+            variant="link"
           >
             <ChevronRightIcon boxSize={9} />
           </Button>
@@ -346,7 +346,7 @@ import React, {
     return (
       <>
         {itemWidth && (
-          <VStack ref={node} spacing={5} alignItems="stretch">
+          <VStack ref={node} alignItems="stretch" spacing={5}>
             <MotionFlex
               dragConstraints={node}
               onDragStart={handleDragStart}
@@ -396,15 +396,15 @@ import React, {
   
     return (
       <Flex
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        onKeyUp={handleKeyUp}
-        onKeyDown={handleKeyDown}
         w={`${itemWidth}px`}
+        py="4px"
         _notLast={{
           mr: `${gap}px`
         }}
-        py="4px"
+        onBlur={handleBlur}
+        onFocus={handleFocus}
+        onKeyDown={handleKeyDown}
+        onKeyUp={handleKeyUp}
       >
         {children}
       </Flex>
