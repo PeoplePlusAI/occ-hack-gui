@@ -115,9 +115,9 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
         <div className="mt-6">
           <Button 
             w="full" 
-            bgGradient="linear(to-r, pink.500, purple.500)" 
+            bgGradient="linear(to-r, #3CCF91, #3CCF91)" 
             color="white" 
-            _hover={{ bgGradient: "linear(to-r, pink.600, purple.600)" }}
+            _hover={{ bgGradient: "linear(to-r, #23b075, #23b075)" }}
             onClick={onOpen}
           >
             Get Started

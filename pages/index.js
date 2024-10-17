@@ -6,6 +6,7 @@ import YoutubeVideo from '../components/HomePage/YoutubeVideo'
 import FeaturedArticles from '../components/HomePage/FeaturedArticles'
 import Countdown from '../components/HomePage/Countdown'
 import Header from '../components/Header'
+import Carousel from '../components/Carousel'
 
 export default function Index({ introduction }) {
   
@@ -27,16 +28,17 @@ export default function Index({ introduction }) {
           <br />
           <Countdown targetDate="2024-10-20T00:00:00" />
           <Flex as='section' align="center" justify="center" alignSelf='center' direction={"column"}>
-            <Text fontSize={"5xl"} fontWeight="medium">The List of Providers is now Live!</Text>
-          <Link href='/resources'><Button  h={100} mt={20}  bgColor={'button1'} variant='solid'>
-            <Text fontSize={{base:'md',md:"2xl"}} color="white" > Check the Compute instances available</Text>
+            <Text fontSize={"5xl"} fontWeight="medium" mb={5}>The List of Providers is now Live!</Text>
+            <Carousel />
+          <Link href='/resources'><Button  h={100} mt={5}  bgColor={'button1'} variant='solid' _hover={{bg:'buttonHover'}}>
+            <Text fontSize={{base:'md',md:"2xl"}} color="white" > Check all the compute available</Text>
           </Button>
           </Link>
           </Flex>
           <OCCPartners />
           <YoutubeVideo /> 
           <Flex as='section' align="center" justify="center" alignSelf='center'>
-          <Button w={{base:300,md:400}} h={{base:70, md:100}} _hover={{ bg: "white", color: "button1" }} bgColor={'button1'} onClick={() => window.open('https://peopleplus.ai/occ', '_blank')} variant='solid'>
+          <Button w={{base:300,md:400}} h={{base:70, md:100}} _hover={{ bg: "buttonHover" }} bgColor={'button1'} onClick={() => window.open('https://peopleplus.ai/occ', '_blank')} variant='solid'>
             <Text fontSize={{base:'xl',md:'2xl'}} > Visit the OCC Website</Text>
           </Button>
           </Flex>
