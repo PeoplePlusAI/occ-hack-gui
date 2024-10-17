@@ -68,7 +68,7 @@ export default function CountdownTimer({ targetDate }: { targetDate: string }) {
           borderRadius="full"
           alt={`pes logo`}
           fallbackSrc="/placeholder.png"
-          src={'/PESlogo.png'}
+          src='/PESLogo.png'
         />
         </Flex>
       </VStack>
