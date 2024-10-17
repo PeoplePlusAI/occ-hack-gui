@@ -55,8 +55,7 @@ function Carousel() {
         py={8}
         px={0}
         maxW={{
-          base: "100%",
-          sm: "35rem",
+          base: "20rem",
           md: "43.75rem",
           lg: "57.5rem",
           xl: "75rem",
