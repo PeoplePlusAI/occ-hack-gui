@@ -1,8 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-disable chakra-ui/require-specific-component */
-/* eslint-disable chakra-ui/props-shorthand */
-/* eslint-disable chakra-ui/props-order */
-
 import React, { useState } from 'react'
 import { Box, VStack, HStack, Text, Icon, Button, Link, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure } from '@chakra-ui/react'
 import { FaServer, FaDatabase } from 'react-icons/fa'
@@ -44,50 +39,50 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
 
   return (
     <Box
-      borderWidth="1px"
-      borderRadius="lg"
-      p={4}
-      shadow="md"
-      bg="secondary"
-      maxW="sm"
       minW="16.5em"
+      maxW="sm"
+      p={4}
+      bg="secondary"
+      borderWidth="1px"
       borderColor="blue.200"
-      onClick={onOpen}
+      borderRadius="lg"
+      shadow="md"
       _hover={{ cursor: "pointer" }}
+      onClick={onOpen}
     >
       <VStack align="stretch" spacing={3}>
       <HStack spacing={3}>
           <Icon as={ resourceCard.computeType == ComputeTypes.GPU ? BsGpuCard : (resourceCard.computeType == ComputeTypes.STORAGE ? FaDatabase : FaServer)} boxSize={8} color="white" />
           <VStack align="start" spacing={0}>
-            <Text fontWeight="bold" fontSize="3xl" color="gray.400" align="center">
+            <Text align="center" color="gray.400" fontSize="3xl" fontWeight="bold">
               {resourceCard.providerName}
             </Text>
-            <Text fontSize="sm" color="gray.500">
+            <Text color="gray.500" fontSize="sm">
               {resourceCard.occSpecName}
             </Text>
           </VStack>
         </HStack>
         <VStack align="stretch" spacing={2}>
           <HStack justify="space-between">
-            <Text fontSize="md" color="gray.400">
+            <Text color="gray.400" fontSize="md">
               Type
             </Text>
             <Text fontSize="md">{resourceCard.computeType == 1  ?  "GPU" : "CPU" }</Text>
           </HStack>
           <HStack justify="space-between">
-            <Text fontSize="md" color="gray.400">
+            <Text color="gray.400" fontSize="md">
               Data Storage
             </Text>
             <Text fontSize="md">{resourceCard.storage}</Text>
           </HStack>
           <HStack justify="space-between">
-            <Text fontSize="md" color="gray.400">
+            <Text color="gray.400" fontSize="md">
               Memory
             </Text>
             <Text fontSize="md">{resourceCard.memory}</Text>
           </HStack>
           <HStack justify="space-between">
-            <Text fontSize="md" color="gray.400">
+            <Text color="gray.400" fontSize="md">
               Compute
             </Text>
             <Text fontSize="md">{resourceCard.compute}</Text>
@@ -100,7 +95,7 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
     .join(', ')}</Text>
           </HStack> */}
           <HStack justify="space-between">
-            <Text fontSize="md" color="gray.400" >
+            <Text color="gray.400" fontSize="md" >
               Python Version
             </Text>
             <Text fontSize="md">{resourceCard.pythonVersion}</Text>
@@ -125,9 +120,9 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
         </div>
       </VStack>
 
-      <Modal isOpen={isOpen} onClose={onClose} size="lg" isCentered>
+      <Modal isCentered isOpen={isOpen} onClose={onClose} size="lg">
         <ModalOverlay />
-        <ModalContent backgroundColor="black" border="3px solid #4ade80">
+        <ModalContent border="3px solid #4ade80" bgColor="black">
           <ModalHeader>{resourceCard.providerName} - Details</ModalHeader>
           <ModalCloseButton />
           <ModalBody >
@@ -144,12 +139,12 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button mr={3} colorScheme="blue" onClick={onClose}>
               Close
             </Button>
             <Link href={resourceCard.endpoint} isExternal>
-              <Button bgGradient="linear(to-r, pink.500, purple.500)" 
-            color="white" 
+              <Button color="white" 
+            bgGradient="linear(to-r, pink.500, purple.500)" 
             _hover={{ bgGradient: "linear(to-r, pink.600, purple.600)" }} >Go to Resource</Button>
             </Link>
           </ModalFooter>
