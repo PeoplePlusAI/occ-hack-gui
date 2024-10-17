@@ -45,7 +45,7 @@ export default function Introduction({ introduction }) {
           <Image pos="absolute"
             zIndex={0}
             top={{ base: '-150', md: '-10' }}
-            right={{ base: '-4', md: '-50' }}
+            right={{ base: '-4', md: '-50' , xl:'-60'}}
             display={{base:"none", lg:"block"}}
             w={{ base: '300px', md: '400px' }}
             alt=""
@@ -78,6 +78,7 @@ export default function Introduction({ introduction }) {
           fontSize="display"
           lineHeight={'95%'}
           letterSpacing={{ sm: '-1.2px', md: '-1.8px' }}
+          w={{base:"75%",xl:"90%"}}
         >
           Open Cloud Compute
         </Heading>
