@@ -53,10 +53,10 @@ export default function Navbar({ enableTransition }) {
           variant="unstyled"
         >
           <Image
-            boxSize="40px"
+            boxSize="100px"
             objectFit="contain"
             alt="Logo"
-            src="public/logo.svg?height=40&width=40"
+            src="/OCCLogo.png?height=100&width=100"
           />
         </Button>
       </Flex>
@@ -89,11 +89,6 @@ export default function Navbar({ enableTransition }) {
                   Projects
                 </Button>
               </NextLink> */}
-              <NextLink passHref href="/blog" _hover={{ bg: "white", color: "black" }}>
-                <Button as="a" fontSize="16px" variant="ghost">
-                  Blog
-                </Button>
-              </NextLink>
             </Stack>
           </DrawerBody>
         </DrawerContent>
