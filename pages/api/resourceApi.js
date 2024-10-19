@@ -1,6 +1,6 @@
 import {ComputeTypes} from '../../components/ResourcePage/resouceCardModal';
 
-const API_URL = process.env.NEXT_PUBLIC_BASE_URL_RESOURCE_API_URL;
+const API_URL = process.env.NEXT_PUBLIC_RESOURCE_API_URL;
 
 function formatData(item) {
   return {
@@ -30,7 +30,7 @@ function resourceFomat(item) {
   let data = formatData(item)
   return {
     ...data,
-    providerName : data.providerName == 'vgyn' ? 'Vigyan Labs' : 'Jarvis Labs',
+    providerName : data.providerName == 'vgyn' ? 'Vigyanlabs' : 'Jarvislabs',
 
   }
 }
