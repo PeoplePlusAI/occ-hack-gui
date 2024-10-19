@@ -64,10 +64,10 @@ export default function CountdownTimer({ targetDate }: { targetDate: string }) {
         </VStack>
         <Image
           w={{base:250,lg:300}}
+          mt={5}
+          mr={5}
           alt={`pes logo`}
           src='/PESLogo.png'
-          mr={5}
-          mt={5}
         />
         </Flex>
       </VStack>
