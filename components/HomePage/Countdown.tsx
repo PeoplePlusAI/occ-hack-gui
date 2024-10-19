@@ -40,8 +40,8 @@ export default function CountdownTimer({ targetDate }: { targetDate: string }) {
       <VStack justifyContent={"space-between"}>
         
         <Flex align={{base: 'flex-start', md: 'center'}} justify={{base: 'start', md: 'space-around'}} direction={{base: 'column', md: 'row'}} w="80vw">
-        <VStack alignItems={"start"} w={"75%"}>
-        <Text fontSize="3xl" fontWeight="bold">The OCC team presents its first Hackathon in partnership with PES University, Electronic City Campus</Text>
+        <VStack alignItems={"start"} w={"55%"}>
+        <Text fontSize="3xl" fontWeight="bold">The OCC team presents its first Hackathon in partnership with PES University, Electronic City Campus, Bengaluru</Text>
         <Text fontSize="2xl" fontWeight="bold">Countdown to the Hackathon</Text>
         <HStack color={"button1"} spacing={{base:4, md:10}}>
           <VStack>
@@ -64,8 +64,6 @@ export default function CountdownTimer({ targetDate }: { targetDate: string }) {
         </VStack>
         <Image
           w={300}
-          h={300}
-          borderRadius="full"
           alt={`pes logo`}
           src='/PESLogo.png'
         />
