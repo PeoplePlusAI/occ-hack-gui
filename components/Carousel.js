@@ -36,7 +36,7 @@ function Carousel() {
       try {
         const result = await fetchDataFromAPI();  // Call the API function
         setData(result);  // Update state with the fetched data
-        console.log(result)
+        // console.log(result)
         // setUsecasesDropdown(getUseCasesList(result))
         // setProviderssDropdown(getProvidersList(result))
         // setMaxStroage(getMaximumStorage(result))

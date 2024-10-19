@@ -39,7 +39,7 @@ function resourceFomat(item) {
 
 export const fetchDataFromAPI = async () => {
   try {
-    console.log(API_URL)
+    // console.log(API_URL)
     const response = await fetch(API_URL); // Replace with your API URL
     if (!response.ok) {
       throw new Error('Network response was not ok');
