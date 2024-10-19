@@ -30,7 +30,7 @@ function resourceFomat(item) {
   let data = formatData(item)
   return {
     ...data,
-    providerName : data.providerName == 'vgyn' ? 'Vigyan Labs' : 'Jarvis Labs',
+    providerName : data.providerName == 'vgyn' ? 'Vigyanlabs' : 'Jarvislabs',
 
   }
 }
