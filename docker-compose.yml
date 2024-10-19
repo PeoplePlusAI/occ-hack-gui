@@ -16,4 +16,3 @@ services:
 
 networks:
   occn-opensearch-net:
-    external: true
