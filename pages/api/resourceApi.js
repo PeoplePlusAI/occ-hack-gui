@@ -1,6 +1,6 @@
 import {ComputeTypes} from '../../components/ResourcePage/resouceCardModal';
 
-const API_URL = process.env.NEXT_PUBLIC_BASE_URL_RESOURCE_API_URL;
+const API_URL = process.env.NEXT_PUBLIC_RESOURCE_API_URL;
 
 function formatData(item) {
   return {
