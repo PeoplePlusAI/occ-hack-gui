@@ -74,11 +74,11 @@ export default function Introduction({ introduction }) {
         <Heading
           pos="relative"
           zIndex={1}
+          w={{base:"75%",xl:"90%"}}
           color="displayColor"
           fontSize="display"
           lineHeight={'95%'}
           letterSpacing={{ sm: '-1.2px', md: '-1.8px' }}
-          w={{base:"75%",xl:"90%"}}
         >
           Open Cloud Compute
         </Heading>
