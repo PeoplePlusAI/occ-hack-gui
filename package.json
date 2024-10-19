@@ -24,7 +24,7 @@
     "next": "13",
     "next-connect": "^0.10.1",
     "next-google-fonts": "^2.2.0",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^3.0.2",
     "next-seo": "^4.28.1",
     "next-session": "^3.4.0",
     "next-sitemap": "^4.2.3",

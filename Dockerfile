@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Step 4: Install dependencies
-RUN npm install
+RUN npm install --force
 
 # Step 5: Copy the rest of the Next.js app source code into the container
 COPY . .
