@@ -90,18 +90,18 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
             </Text>
             <Text fontSize="xl">{resourceCard.providerName}</Text>
           </HStack>
-          {/* <HStack justify="space-between">
+          <HStack justify="space-between">
             <Text color="gray.400" fontSize="xl">
               Data Storage
             </Text>
             <Text fontSize="xl">{resourceCard.storage}</Text>
-          </HStack> */}
-          <HStack justify="space-between">
+          </HStack>
+          {/* <HStack justify="space-between">
             <Text color="gray.400" fontSize="xl">
               Memory
             </Text>
             <Text fontSize="xl">{resourceCard.memory}</Text>
-          </HStack>
+          </HStack> */}
           <HStack justify="space-between">
             <Text color="gray.400" fontSize="xl">
               Compute
@@ -145,9 +145,9 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
             <VStack align="stretch" spacing={4}>
               {/* <Text><strong>Resource ID:</strong> {resourceCard.resourceId}</Text> */}
               <Text><strong>Compute Type:</strong> {ComputeTypes[resourceCard.computeType]}</Text>
-              {/* <Text><strong>Storage:</strong> {resourceCard.storage}</Text> */}
+              <Text><strong>Storage:</strong> {resourceCard.storage}</Text>
               <Text><strong>Provider:</strong> {resourceCard.providerName}</Text>
-              <Text><strong>Memory:</strong> {resourceCard.memory}</Text>
+              {/* <Text><strong>Memory:</strong> {resourceCard.memory}</Text> */}
               <Text><strong>Compute:</strong> {resourceCard.compute}</Text>
               {/* <Text><strong>Python Version:</strong> {resourceCard.pythonVersion}</Text> */}
               <Text><strong>Use Cases:</strong> {resourceCard.useCases.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(', ')}</Text>
