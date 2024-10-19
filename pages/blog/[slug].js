@@ -215,6 +215,7 @@ export async function getStaticProps({ params }) {
   const mdxSource = await serialize(source, {
     mdxOptions: {
       rehypePlugins: [mdxPrism],
+      development: false
     },
   })
 
