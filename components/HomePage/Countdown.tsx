@@ -36,7 +36,7 @@ export default function CountdownTimer({ targetDate }: { targetDate: string }) {
   }, [targetDate])
 
   return (
-    <Flex as="section" align="center" alignSelf='center' w={{ base:'90vw',md:"80vw"}} p={10}  py={12} borderWidth={1} borderRadius="lg">
+    <Flex as="section" align="center" alignSelf='center' w={{ base:'90vw',lg:"80vw"}} p={10}  py={12} borderWidth={1} borderRadius="lg">
       <VStack justifyContent={"space-between"}>
         
         <Flex align={{base: 'flex-start', md: 'center'}} justify={{base: 'start', md: 'space-around'}} direction={{base: 'column', md: 'row'}} w="80vw">
@@ -63,10 +63,11 @@ export default function CountdownTimer({ targetDate }: { targetDate: string }) {
         </HStack>
         </VStack>
         <Image
-          w={300}
+          w={{base:250,lg:300}}
           alt={`pes logo`}
           src='/PESLogo.png'
           mr={5}
+          mt={5}
         />
         </Flex>
       </VStack>
