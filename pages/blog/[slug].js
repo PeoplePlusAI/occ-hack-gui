@@ -63,7 +63,7 @@ export default function Post({ metadata, publishedDate, source, toc }) {
     <>
       <Container>
         <Stack>
-          {/* <Stack
+          <Stack
             overflow="hidden"
             w={"1100px"}
             h={"500px"}
@@ -85,7 +85,7 @@ export default function Post({ metadata, publishedDate, source, toc }) {
               priority
               src={metadata.frontmatter.image}
             />
-          </Stack> */}
+          </Stack>
 
           <Stack pt={4}>
             <Heading
