@@ -10,10 +10,10 @@ services:
     stdin_open: true  # Keep the container open
     tty: true         # Enable a terminal for debugging
     networks:
-      - shared_network
+      - occn-opensearch-net
     environment:
       - NODE_ENV=development # Set the environment to development
 
 networks:
-  shared_network:
+  occn-opensearch-net:
     external: true
