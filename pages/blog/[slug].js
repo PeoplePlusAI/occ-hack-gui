@@ -64,14 +64,14 @@ export default function Post({ metadata, publishedDate, source, toc }) {
       <Container>
         <Stack>
           <Stack
+            overflow="hidden"
+            w={"1100px"}
+            h={"500px"}
             mx="auto"
             mt="73px"
             border="1px"
             borderColor={{ base: '#333', md: 'borderColor' }}
-            borderRadius="10px"
-            width={"1100px"}
-            height={"500px"}
-            overflow="hidden" 
+            borderRadius="10px" 
           >
             <Image
               width={1100}
