@@ -69,6 +69,9 @@ export default function Post({ metadata, publishedDate, source, toc }) {
             border="1px"
             borderColor={{ base: '#333', md: 'borderColor' }}
             borderRadius="10px"
+            width={"1100px"}
+            height={"500px"}
+            overflow="hidden" 
           >
             <Image
               width={1100}
