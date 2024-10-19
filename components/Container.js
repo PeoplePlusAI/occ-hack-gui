@@ -1,4 +1,4 @@
-import { Box, Flex, Stack, Text, chakra } from '@chakra-ui/react'
+import { Box, Flex, Stack, Text, chakra,Link } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import ReactGA from 'react-ga4'
 import Navbar from './Navbar'
@@ -29,14 +29,14 @@ const Container = ({ enableTransition, children }) => {
         </Flex>
         <Stack alignItems="center" mt={10} mb={5}>
           <Text fontSize="sm" textAlign="center">
-          Curated by EkStep Foundation & {' '}
-            <chakra.span color="button1" fontWeight="semibold">
+          Curated by <Link textDecoration={"none"} href='https://peopleplus.ekstep.org/'isExternal>EkStep Foundation</Link> & {' '}
+          <Link textDecoration={"none"} href='https://peopleplus.ai/' isExternal><chakra.span color="button1" fontWeight="semibold">
             People
             </chakra.span>{' '}
             +{' '}
             <chakra.span color="button1" fontWeight="semibold">
               AI
-            </chakra.span>
+            </chakra.span></Link>
             .
           </Text>
         </Stack>
