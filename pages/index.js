@@ -26,7 +26,7 @@ export default function Index({ introduction }) {
           <br />
           <Introduction introduction={introduction} />
           <br />
-          <Countdown targetDate="2024-10-20T00:00:00" />
+          <Countdown targetDate="2024-10-20T09:00:00" />
           <Flex as='section' align="center" justify="center" direction={"column"} alignSelf='center'>
             <Text mb={5} fontSize={"5xl"} fontWeight="medium">The List of Providers is now Live!</Text>
             <Carousel />
