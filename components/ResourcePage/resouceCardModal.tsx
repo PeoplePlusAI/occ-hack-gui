@@ -54,7 +54,7 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
 
   return (
     <Box
-      minW="20.5em"
+      minW="20em"
       maxW="xl"
       p={4}
       bg="secondary"

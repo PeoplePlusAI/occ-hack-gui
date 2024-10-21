@@ -88,6 +88,8 @@ const overrides = {
     display: fluidType(80, 144),
     display2: fluidType(24, 36),
     display3: fluidType(16, 24),
+    display4: fluidType(32, 60),
+    display5: fluidType(80,100)
   },
 }
 

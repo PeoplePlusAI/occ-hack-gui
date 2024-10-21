@@ -114,7 +114,7 @@ export default function Navbar({ enableTransition }) {
           align="center"
           justify="space-between"
           direction="row"
-          w={{ base: '100%', lg: '75rem' }}
+          w={{ base: '100%', xl:'75%' }}
           mx="auto"
           px="22px"
           py="3"

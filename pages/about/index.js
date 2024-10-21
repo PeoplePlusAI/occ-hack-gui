@@ -16,6 +16,7 @@ export default function About() {
       <Container>
         <Stack
           justifyContent="center"
+          maxW={{base:"90%",md:"75%"}}
           my={{ base: '15vh', md: '16vh' }}
           spacing={10}
         >
@@ -24,8 +25,8 @@ export default function About() {
             <Heading color="displayColor" fontSize={{ base: '4xl', md: '6xl' }}>
               About Us
             </Heading>
-            <Flex align="center" justify="space-between" direction={{ base: 'column', md: 'row' }} w="full" px={4}>
-            <Text w={'75%'} mr={10} fontSize={{ base: '16px', md: '20px' }}>
+            <Flex align="start" justify="space-between" direction={{ base: 'column', md: 'row' }} w="full" px={4}>
+            <Text w={{base:"90%",md:'75%'}} mr={{base:0,md:10}} mb={{base:5,md:0}}fontSize={{ base: '16px', md: '20px' }}>
             Open Cloud Compute (OCC) is an initiative launched by the EkStep Foundation in India to create a decentralized and interoperable cloud computing network. We aim to connect independent micro data centers, enhancing access to computing resources while promoting local data sovereignty. By fostering competition among smaller providers, we seeks to democratize cloud services, making them more accessible and affordable for businesses of all sizes.
             </Text>
             <Box
