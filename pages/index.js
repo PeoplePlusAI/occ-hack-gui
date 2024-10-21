@@ -3,6 +3,7 @@ import Container from '../components/Container'
 import Introduction from '../components/HomePage/Introduction'
 import OCCPartners from '../components/HomePage/partners'
 import YoutubeVideo from '../components/HomePage/YoutubeVideo'
+import DocumentComponent from '../components/HomePage/document'
 import FeaturedArticles from '../components/HomePage/FeaturedArticles'
 import Countdown from '../components/HomePage/Countdown'
 import Header from '../components/Header'
@@ -35,6 +36,7 @@ export default function Index({ introduction }) {
           </Button>
           </Link>
           </Flex>
+          <DocumentComponent />
           <OCCPartners />
           <YoutubeVideo /> 
           <Flex as='section' align="center" justify="center" alignSelf='center'>
