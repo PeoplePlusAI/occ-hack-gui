@@ -62,7 +62,7 @@ export default function Resources({}) {
             <Divider thickness="100px"/>
           </Stack>
           <HStack>
-            {loading ? <Center><Spinner pos='fixed' top='50%' left="50%" size='xl' thickness='6px'/></Center> : <SimpleGrid columns={{ sm: 2, md: 4 }} spacing={6}>
+            {loading ? <Center><Spinner pos='fixed' top='50%' left="50%" size='xl' thickness='6px'/></Center> : <SimpleGrid columns={{ sm: 2, md: 3 }} spacing={8}>
             {ResourceCardList.map(function(object, i){
               if(applyFilter(object, currentFilters)){
                 return <ResourceCard key={i} resourceCard={object} />;

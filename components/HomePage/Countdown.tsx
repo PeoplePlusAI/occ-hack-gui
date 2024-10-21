@@ -36,12 +36,12 @@ export default function CountdownTimer({ targetDate }: { targetDate: string }) {
   }, [targetDate])
 
   return (
-    <Flex as="section" align="center" alignSelf='center' w={{ base:'90vw',md:"80vw"}} p={10}  py={12} borderWidth={1} borderRadius="lg">
+    <Flex as="section" align="center" alignSelf='center' w={{ base:'90vw',lg:"80vw"}} p={10}  py={12} borderWidth={1} borderRadius="lg">
       <VStack justifyContent={"space-between"}>
         
         <Flex align={{base: 'flex-start', md: 'center'}} justify={{base: 'start', md: 'space-around'}} direction={{base: 'column', md: 'row'}} w="80vw">
-        <VStack alignItems={"start"} w={"75%"}>
-        <Text fontSize="3xl" fontWeight="bold">The OCC team presents its first Hackathon in partnership with PES University, Electronic City Campus</Text>
+        <VStack alignItems={"start"} w={"55%"}>
+        <Text fontSize="3xl" fontWeight="bold">The OCC team presents its first Hackathon in partnership with PES University, Electronic City Campus, Bengaluru</Text>
         <Text fontSize="2xl" fontWeight="bold">Countdown to the Hackathon</Text>
         <HStack color={"button1"} spacing={{base:4, md:10}}>
           <VStack>
@@ -63,12 +63,11 @@ export default function CountdownTimer({ targetDate }: { targetDate: string }) {
         </HStack>
         </VStack>
         <Image
-          w={300}
-          h={300}
-          borderRadius="full"
+          w={{base:250,lg:300}}
+          mt={5}
+          mr={5}
           alt={`pes logo`}
-          fallbackSrc="/placeholder.png"
-          src={'/PESlogo.png'}
+          src='/PESLogo.png'
         />
         </Flex>
       </VStack>

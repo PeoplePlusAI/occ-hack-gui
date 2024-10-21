@@ -37,10 +37,19 @@ export default function Introduction({ introduction }) {
           <Image pos="absolute"
             zIndex={0}
             top={{ base: '-150', md: '-250' }}
-            right={{ base: '-4', md: '-10' }}
+            right={{ base: '-4', md: '-30' , xl:'-35'}}
             w={{ base: '350px', md: '450px' }}
             alt=""
             src="/peopleAi.svg">
+          </Image>
+          <Image pos="absolute"
+            zIndex={0}
+            top={{ base: '-150', md: '-10' }}
+            right={{ base: '-4', md: '-30' , xl:'-35'}}
+            display={{base:"none", md:"block"}}
+            w={{ base: '300px', md: '400px' }}
+            alt=""
+            src="https://framerusercontent.com/images/M9s4txXkH3jzk9psUXH7UpLw7sU.png?scale-down-to=512">
           </Image>
           <Image
             pos="absolute"
@@ -65,6 +74,7 @@ export default function Introduction({ introduction }) {
         <Heading
           pos="relative"
           zIndex={1}
+          w={{base:"75%",xl:"90%"}}
           color="displayColor"
           fontSize="display"
           lineHeight={'95%'}

@@ -51,7 +51,7 @@ export default function About() {
             objectFit="cover"
             alt={` logo`}
             fallbackSrc="/placeholder.png" 
-            src='/AboutOCC.jpeg'
+            src='/AboutUs.jpeg'
             />
             </Box>
             </Flex>
