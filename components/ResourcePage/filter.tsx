@@ -76,12 +76,24 @@ export default function HorizontalFilterUI({ providers, usecases = null, setFilt
     )
   }
 
+  const hangleSearchChange = (value : string) => {
+    setSearchTerm(value)
+    setFilterSelection(
+      {
+        ...filterData,
+        "search" : value,
+      }
+    )
+
+  }
+
   const clearFilters = () => {
     setFilterSelection(cleanFilters);
     setuseCases([]);
     setSelectedCategories([]);
     setStorage(0);
     setSelection(null);
+    setSearchTerm("");
   }
 
   return (
@@ -92,12 +104,12 @@ export default function HorizontalFilterUI({ providers, usecases = null, setFilt
         </Heading> */}
 
         <Flex align="flex-start" direction={{ base: "column", md: "row" }} gap={4}>
-          {/* <Box flex="1">
+          <Box flex="1">
             <Text mb={2} fontWeight="bold">
               Search:
             </Text>
-            <Input placeholder="Search products..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} aria-label="Search products" outline="1px solid"/>
-          </Box> */}
+            <Input outline="1px solid" aria-label="Search products" onChange={(e) => hangleSearchChange(e.target.value)} placeholder="Search Resources..." value={searchTerm}/>
+          </Box>
 
           <Box flex="1">
             <Text mb={2} fontWeight="bold">
