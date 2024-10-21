@@ -1,8 +1,4 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-disable chakra-ui/require-specific-component */
-/* eslint-disable chakra-ui/props-shorthand */
-/* eslint-disable chakra-ui/props-order */
-
 import React, { useState } from 'react'
 import {
   Box,
@@ -90,32 +86,32 @@ export default function HorizontalFilterUI({ providers, usecases = null, setFilt
 
   return (
     <Container maxW="container.xl" py={8}>
-      <VStack spacing={6} align="stretch">
+      <VStack align="stretch" spacing={6}>
         {/* <Heading as="h1" size="xl" textAlign="center" mb={6}>
           Product Filters
         </Heading> */}
 
-        <Flex direction={{ base: "column", md: "row" }} gap={4} alignItems="flex-start">
-          <Box flex="1">
+        <Flex align="flex-start" direction={{ base: "column", md: "row" }} gap={4}>
+          {/* <Box flex="1">
             <Text mb={2} fontWeight="bold">
               Search:
             </Text>
             <Input placeholder="Search products..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} aria-label="Search products" outline="1px solid"/>
-          </Box>
+          </Box> */}
 
           <Box flex="1">
             <Text mb={2} fontWeight="bold">
               Providers:
             </Text>
             <Menu closeOnSelect={false}>
-              <MenuButton as={Button} rightIcon={<ChevronDownIcon />} width="100%" border="3px solid #4ade80" bgColor="black" _hover={{ bg: useColorModeValue("gray.700", "gray.700") }} _active={{ bg: useColorModeValue("gray.700", "gray.700") }}>
+              <MenuButton as={Button} w="100%" border="3px solid #4ade80" _hover={{ bg: useColorModeValue("gray.700", "gray.700") }} _active={{ bg: useColorModeValue("gray.700", "gray.700") }} bgColor="black" rightIcon={<ChevronDownIcon />}>
                 {selectedCategories.length > 0 ? `${selectedCategories.length} selected` : 'Select Providers'}
               </MenuButton>
-              <MenuList border="1px solid #4ade80" bgColor="black" zIndex="5">
+              <MenuList zIndex="5" border="1px solid #4ade80" bgColor="black">
                 <MenuOptionGroup
-                  type="checkbox" value={selectedCategories} onChange={(values) => handleCategoryChange(values as string[])}>
+                  onChange={(values) => handleCategoryChange(values as string[])} type="checkbox" value={selectedCategories}>
                   {providers.map((category) => (
-                    <MenuItemOption key={category} value={category} _focus={{ bg: useColorModeValue("blue.700", "blue.700") }}>
+                    <MenuItemOption key={category} _focus={{ bg: useColorModeValue("blue.700", "blue.700") }} value={category}>
                       {category}
                     </MenuItemOption>
                   ))}
@@ -125,14 +121,14 @@ export default function HorizontalFilterUI({ providers, usecases = null, setFilt
           </Box>
 
           <Box flex="1">
-            <Text mb={2} fontWeight="bold" color="white">
+            <Text mb={2} color="white" fontWeight="bold">
               Use Cases
             </Text>
-            <Menu closeOnSelect={false} border-color="#4ade80">
-              <MenuButton as={Button} rightIcon={<ChevronDownIcon />} width="100%" border="3px solid #4ade80" bgColor="black" _hover={{ bg: useColorModeValue("gray.700", "gray.700") }} _active={{ bg: useColorModeValue("gray.700", "gray.700") }}>
+            <Menu border-color="#4ade80" closeOnSelect={false}>
+              <MenuButton as={Button} w="100%" border="3px solid #4ade80" _hover={{ bg: useColorModeValue("gray.700", "gray.700") }} _active={{ bg: useColorModeValue("gray.700", "gray.700") }} bgColor="black" rightIcon={<ChevronDownIcon />}>
                 {useCases.length > 0 ? `${useCases.length} selected` : 'Select Use Cases'}
               </MenuButton>
-              <MenuList border="1px solid #4ade80" bgColor="black" zIndex="2" overflowY={"scroll"} maxHeight={"40vh"} css={{
+              <MenuList zIndex="2" overflowY={"scroll"} maxH={"40vh"} border="1px solid #4ade80" bgColor="black" css={{
                 "&::-webkit-scrollbar": {
                   width: "6px",
                 },
@@ -144,9 +140,9 @@ export default function HorizontalFilterUI({ providers, usecases = null, setFilt
                   borderRadius: "24px",
                 },
               }}>
-                <MenuOptionGroup type="checkbox" value={useCases} onChange={(values) => handleUseCaseChange(values as string[])}>
+                <MenuOptionGroup onChange={(values) => handleUseCaseChange(values as string[])} type="checkbox" value={useCases}>
                   {usecases.map((category) => (
-                    <MenuItemOption key={category} value={category} _focus={{ bg: useColorModeValue("blue.700", "blue.700") }}>
+                    <MenuItemOption key={category} _focus={{ bg: useColorModeValue("blue.700", "blue.700") }} value={category}>
                       {category}
                     </MenuItemOption>
                   ))}
@@ -159,7 +155,7 @@ export default function HorizontalFilterUI({ providers, usecases = null, setFilt
             <Text mb={2} fontWeight="bold">
               Minimum Storage: {storage} GB
             </Text>
-            <Slider aria-label="price-range-slider" defaultValue={0} min={0} max={maxStorage} step={1} onChange={(val) => handleStorageChange(val)} value={storage}>
+            <Slider aria-label="price-range-slider" defaultValue={0} max={maxStorage} min={0} onChange={(val) => handleStorageChange(val)} step={1} value={storage}>
               <SliderTrack>
                 <SliderFilledTrack />
               </SliderTrack >
@@ -172,7 +168,7 @@ export default function HorizontalFilterUI({ providers, usecases = null, setFilt
           <SelectionIconButton text='GPU' icon={BsGpuCard} onClick={() => changeComputeSelection(ComputeTypes.GPU)} isActive={ComputeTypes.GPU == currentSelection} />
           <SelectionIconButton text='CPU' icon={FaServer} onClick={() => changeComputeSelection(ComputeTypes.CPU)} isActive={ComputeTypes.CPU == currentSelection} />
           <Spacer />
-          <Button bg="#111827" color="white" borderRadius="md" px={4} py={2} _hover={{ bg: "#1f2937" }} _active={{ bg: "#374151" }} shadow="0 0 0 1px #3b82f6" onClick={clearFilters}>
+          <Button px={4} py={2} color="white" bg="#111827" borderRadius="md" shadow="0 0 0 1px #3b82f6" _hover={{ bg: "#1f2937" }} _active={{ bg: "#374151" }} onClick={clearFilters}>
             <Text fontSize="md" fontWeight="medium">
               Clear Filters
             </Text>

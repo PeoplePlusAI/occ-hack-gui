@@ -31,6 +31,7 @@ const colors = {
   button1: '#3CCF91',
   button2: '#F6A20E',
   button3: '#5132BF',
+  buttonHover:'#23b075',
   borderColor: '#111111',
   logoGrey: '#8F9094',
 }

@@ -64,11 +64,14 @@ export default function Post({ metadata, publishedDate, source, toc }) {
       <Container>
         <Stack>
           <Stack
+            overflow="hidden"
+            w={"1100px"}
+            h={"500px"}
             mx="auto"
             mt="73px"
             border="1px"
             borderColor={{ base: '#333', md: 'borderColor' }}
-            borderRadius="10px"
+            borderRadius="10px" 
           >
             <Image
               width={1100}
@@ -212,6 +215,7 @@ export async function getStaticProps({ params }) {
   const mdxSource = await serialize(source, {
     mdxOptions: {
       rehypePlugins: [mdxPrism],
+      development: false
     },
   })
 

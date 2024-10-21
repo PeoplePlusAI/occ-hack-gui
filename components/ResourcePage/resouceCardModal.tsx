@@ -1,9 +1,4 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-disable chakra-ui/require-specific-component */
-/* eslint-disable chakra-ui/props-shorthand */
-/* eslint-disable chakra-ui/props-order */
-
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, VStack, HStack, Text, Icon, Button, Link, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure } from '@chakra-ui/react'
 import { FaServer, FaDatabase } from 'react-icons/fa'
 import { BsGpuCard } from "react-icons/bs"
@@ -41,115 +36,132 @@ interface MyComponentProps {
 
 const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const [fontSize, setFontSize] = useState('3xl');
+
+
+    useEffect(() => {
+      const textLength = resourceCard?.xaas?.templateName?.length || 0;
+
+      // Adjust font size based on text length
+      if (textLength > 30) {
+        setFontSize('sm'); // smaller font for longer text
+      } else if (textLength > 15) {
+        setFontSize('xl'); // medium font for moderate length
+      } else {
+        setFontSize('3xl'); // default large font
+      }
+    }, [resourceCard]);
 
   return (
     <Box
-      borderWidth="1px"
-      borderRadius="lg"
+      minW="20.5em"
+      maxW="xl"
       p={4}
-      shadow="md"
       bg="secondary"
-      maxW="sm"
-      minW="16.5em"
+      borderWidth="1px"
       borderColor="blue.200"
-      onClick={onOpen}
+      borderRadius="lg"
+      shadow="md"
       _hover={{ cursor: "pointer" }}
+      onClick={onOpen}
     >
       <VStack align="stretch" spacing={3}>
-      <HStack spacing={3}>
+        <HStack h="3em" spacing={3}>
           <Icon as={ resourceCard.computeType == ComputeTypes.GPU ? BsGpuCard : (resourceCard.computeType == ComputeTypes.STORAGE ? FaDatabase : FaServer)} boxSize={8} color="white" />
-          <VStack align="start" spacing={0}>
-            <Text fontWeight="bold" fontSize="3xl" color="gray.400" align="center">
-              {resourceCard.providerName}
+          <VStack align="center" spacing={0}>
+            <Text align="center" color="gray.400" fontSize={fontSize} fontWeight="bold">
+              {resourceCard.xaas.templateName}
             </Text>
-            <Text fontSize="sm" color="gray.500">
+            {/* <Text color="gray.500" fontSize="sm">
               {resourceCard.occSpecName}
-            </Text>
+            </Text> */}
           </VStack>
         </HStack>
-        <VStack align="stretch" spacing={2}>
+        <VStack align="stretch" spacing={2} style={{ marginTop: '20px' }}>
           <HStack justify="space-between">
-            <Text fontSize="md" color="gray.400">
+            <Text color="gray.400" fontSize="xl">
               Type
             </Text>
-            <Text fontSize="md">{resourceCard.computeType == 1  ?  "GPU" : "CPU" }</Text>
+            <Text fontSize="xl">{resourceCard.computeType == 1  ?  "GPU" : "CPU" }</Text>
           </HStack>
           <HStack justify="space-between">
-            <Text fontSize="md" color="gray.400">
+            <Text color="gray.400" fontSize="xl">
+              Provider
+            </Text>
+            <Text fontSize="xl">{resourceCard.providerName}</Text>
+          </HStack>
+          <HStack justify="space-between">
+            <Text color="gray.400" fontSize="xl">
               Data Storage
             </Text>
-            <Text fontSize="md">{resourceCard.storage}</Text>
+            <Text fontSize="xl">{resourceCard.storage}</Text>
           </HStack>
-          <HStack justify="space-between">
-            <Text fontSize="md" color="gray.400">
+          {/* <HStack justify="space-between">
+            <Text color="gray.400" fontSize="xl">
               Memory
             </Text>
-            <Text fontSize="md">{resourceCard.memory}</Text>
-          </HStack>
+            <Text fontSize="xl">{resourceCard.memory}</Text>
+          </HStack> */}
           <HStack justify="space-between">
-            <Text fontSize="md" color="gray.400">
+            <Text color="gray.400" fontSize="xl">
               Compute
             </Text>
-            <Text fontSize="md">{resourceCard.compute}</Text>
+            <Text fontSize="xl">{resourceCard.compute}</Text>
           </HStack>
           {/* <HStack justify="space-between">
-            <Text fontSize="md" color="gray.400">
+            <Text fontSize="xl" color="gray.400">
             Use Cases
             </Text>
-            <Text fontSize="md">{resourceCard.usecases.map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize first letter
+            <Text fontSize="xl">{resourceCard.usecases.map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize first letter
     .join(', ')}</Text>
           </HStack> */}
-          <HStack justify="space-between">
-            <Text fontSize="md" color="gray.400" >
-              Python Version
-            </Text>
-            <Text fontSize="md">{resourceCard.pythonVersion}</Text>
-          </HStack>
           {/* <HStack justify="space-between">
-            <Text fontSize="md" color="#4ade80" >
+            <Text fontSize="xl" color="#4ade80" >
               Python Version
             </Text>
-            <Text fontSize="md" color="#53df53">{resourceCard.pythonVersion}</Text>
+            <Text fontSize="xl" color="#53df53">{resourceCard.pythonVersion}</Text>
           </HStack> */}
         </VStack>
-        <div className="mt-6">
+
+        <div className="mt-6" style={{ marginTop: '30px' }}>
           <Button 
             w="full" 
-            bgGradient="linear(to-r, pink.500, purple.500)" 
             color="white" 
-            _hover={{ bgGradient: "linear(to-r, pink.600, purple.600)" }}
+            bgGradient="linear(to-r, #3CCF91, #3CCF91)" 
+            _hover={{ bgGradient: "linear(to-r, #23b075, #23b075)" }}
             onClick={onOpen}
           >
-            Get Started
+            <Text fontSize="xl">Get Started</Text>
           </Button>
         </div>
       </VStack>
 
-      <Modal isOpen={isOpen} onClose={onClose} size="lg" isCentered>
+      <Modal isCentered isOpen={isOpen} onClose={onClose} size="lg">
         <ModalOverlay />
-        <ModalContent backgroundColor="black" border="3px solid #4ade80">
-          <ModalHeader>{resourceCard.providerName} - Details</ModalHeader>
+        <ModalContent border="3px solid #4ade80" bgColor="black">
+          <ModalHeader>{resourceCard.xaas.templateName} - Details</ModalHeader>
           <ModalCloseButton />
           <ModalBody >
             <VStack align="stretch" spacing={4}>
-              <Text><strong>Resource ID:</strong> {resourceCard.resourceId}</Text>
+              {/* <Text><strong>Resource ID:</strong> {resourceCard.resourceId}</Text> */}
               <Text><strong>Compute Type:</strong> {ComputeTypes[resourceCard.computeType]}</Text>
               <Text><strong>Storage:</strong> {resourceCard.storage}</Text>
-              <Text><strong>Memory:</strong> {resourceCard.memory}</Text>
+              <Text><strong>Provider:</strong> {resourceCard.providerName}</Text>
+              {/* <Text><strong>Memory:</strong> {resourceCard.memory}</Text> */}
               <Text><strong>Compute:</strong> {resourceCard.compute}</Text>
-              <Text><strong>Python Version:</strong> {resourceCard.pythonVersion}</Text>
+              {/* <Text><strong>Python Version:</strong> {resourceCard.pythonVersion}</Text> */}
               <Text><strong>Use Cases:</strong> {resourceCard.useCases.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(', ')}</Text>
-              <Text><strong>XaaS:</strong> {resourceCard.xaas.presence} (Template: {resourceCard.xaas.templateName}, Version: {resourceCard.xaas.version})</Text>
+              {/* <Text><strong>XaaS:</strong> {resourceCard.xaas.presence} (Template: {resourceCard.xaas.templateName}, Version: {resourceCard.xaas.version})</Text> */}
             </VStack>
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button mr={3} colorScheme="blue" onClick={onClose}>
               Close
             </Button>
             <Link href={resourceCard.endpoint} isExternal>
-              <Button bgGradient="linear(to-r, pink.500, purple.500)" 
-            color="white" 
+              <Button color="white" 
+            bgGradient="linear(to-r, pink.500, purple.500)" 
             _hover={{ bgGradient: "linear(to-r, pink.600, purple.600)" }} >Go to Resource</Button>
             </Link>
           </ModalFooter>
