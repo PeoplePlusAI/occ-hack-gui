@@ -65,8 +65,8 @@ export default function Post({ metadata, publishedDate, source, toc }) {
         <Stack>
           <Stack
             overflow="hidden"
-            w={"1100px"}
-            h={"500px"}
+            w={{base:"100%",md:1100}}
+            h={{base:300,md:500}}
             mx="auto"
             mt="73px"
             border="1px"

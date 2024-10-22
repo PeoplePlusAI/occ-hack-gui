@@ -61,13 +61,13 @@ export default function DocumentComponent() {
             description="Are you are changing the way we do finances with Gen AI or improving healthcare in a remote town of India? 
 If you have a great project or startup idea, submit it here. Top 10 teams- your compute is on us!"
             icon={FaPencilAlt}
-            onClick={() => window.open('https://peopleplus.ai/', '_blank')}
+            onClick={() => console.log('clicked')}
           />
           <DocumentCard
             title="More about People+AI"
             description="Discover our projects or volunteer with us"
             icon={FaFileAlt}
-            onClick={() => console.log('Q1 2024 Project Update clicked')}
+            onClick={() => window.open('https://peopleplus.ai/', '_blank')}
           />
           <DocumentCard
             title="Search resource by use case"
