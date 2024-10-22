@@ -61,7 +61,7 @@ export default function DocumentComponent() {
             description="Are you are changing the way we do finances with Gen AI or improving healthcare in a remote town of India? 
 If you have a great project or startup idea, submit it here. Top 10 teams- your compute is on us!"
             icon={FaPencilAlt}
-            onClick={() => console.log('clicked')}
+            onClick={() => window.open('https://pplus.ai/occusecase', '_blank')}
           />
           <DocumentCard
             title="More about People+AI"
