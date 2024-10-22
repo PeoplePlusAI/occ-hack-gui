@@ -17,12 +17,13 @@ export default function Index({ posts }) {
   const isLargerThan1024 = useMediaQuery(1024)
 
   return (
-    <Container>
+    <Container
+    >
       <Header title="Blog - OCC Blog"/>
       <Stack
-        as="main"
-        alignItems="flex-start"
-        justifyContent="center"
+        justifyContent="start"
+        minW={{base:"75%"}}
+        maxW={{base:"90%",md:"75%"}}
         my={{ base: '15vh', md: '16vh' }}
         spacing={5}
       >

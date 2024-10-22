@@ -50,6 +50,7 @@ export default function Resources({}) {
       <Container>
         <Stack
           justifyContent="center"
+          maxW={{base:"90%",md:"75%"}}
           my={{ base: '15vh', md: '16vh' }}
           spacing={10}
         >

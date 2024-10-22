@@ -17,14 +17,14 @@ const Container = ({ enableTransition, children }) => {
   if (mounted)
     return (
       <Box
-        w={{ base: '100%', md: '70rem' }}
+        w={{ base: '100%' }}
         mx={{ base: '0', md: 'auto' }}
         px={{ base: '22px', lg: 0 }}
         py={4}
         transition="0.4s"
       >
         <Navbar enableTransition={enableTransition} />
-        <Flex as="main" justify="center" direction="column">
+        <Flex as="main" align="center" justify="center" direction="column">
           {children}
         </Flex>
         <Stack alignItems="center" mt={10} mb={5}>

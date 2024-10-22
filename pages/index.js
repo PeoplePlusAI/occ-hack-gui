@@ -24,12 +24,11 @@ export default function Index({ introduction }) {
           spacing={{ base: '100px', md: '144px' }}
           // resize={vantaRef}
         >
-          <br />
           <Introduction introduction={introduction} />
           <br />
-          <Countdown targetDate="2024-10-20T09:00:00" />
+          {/* <Countdown targetDate="2024-10-20T09:00:00" /> */}
           <Flex as='section' align="center" justify="center" direction={"column"} alignSelf='center'>
-            <Text mb={5} fontSize={"5xl"} fontWeight="medium">The List of Providers is now Live!</Text>
+            <Text align="center" mb={5} fontSize={"5xl"} fontWeight="medium">The List of Providers is now Live!</Text>
             <Carousel />
           <Link href='/resources'><Button  h={100} mt={5}  _hover={{bg:'buttonHover'}} bgColor={'button1'} variant='solid'>
             <Text color="white" fontSize={{base:'md',md:"2xl"}} > Check all the compute available</Text>
@@ -38,7 +37,7 @@ export default function Index({ introduction }) {
           </Flex>
           <DocumentComponent />
           <OCCPartners />
-          <YoutubeVideo /> 
+          {/* <YoutubeVideo />  */}
           <Flex as='section' align="center" justify="center" alignSelf='center'>
           <Button w={{base:300,md:400}} h={{base:70, md:100}} _hover={{ bg: "buttonHover" }} bgColor={'button1'} onClick={() => window.open('https://peopleplus.ai/occ', '_blank')} variant='solid'>
             <Text fontSize={{base:'xl',md:'2xl'}} > Visit the OCC Website</Text>

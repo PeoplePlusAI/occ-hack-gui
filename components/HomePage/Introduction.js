@@ -23,26 +23,32 @@ export default function Introduction({ introduction }) {
 
   return (
     <Stack
-      alignItems="flex-start"
+      alignItems="center"
       justifyContent="flex-start"
       w="100%"
-      spacing={{ base: 8, md: 10 }}
+      spacing={{ base: 4, md: 1 }}
     >
       <SlideFade
         direction="top"
         transition={{ enter: { duration: 0.4, delay: 0.7 } }}
         in={true}
       >
-        <Box pos="relative">
-          <Image pos="absolute"
+      <Image 
             zIndex={0}
-            top={{ base: '-150', md: '-250' }}
-            right={{ base: '-4', md: '-30' , xl:'-35'}}
-            w={{ base: '350px', md: '450px' }}
+            w={{ base: '350px', md: '500px' }}
             alt=""
             src="/peopleAi.svg">
-          </Image>
-          <Image pos="absolute"
+      </Image>
+      </SlideFade>
+      <SlideFade
+        direction="top"
+        transition={{ enter: { duration: 0.4, delay: 0.7 } }}
+        in={true}
+      >
+        
+        <Box pos="relative">
+          
+          {/* <Image pos="absolute"
             zIndex={0}
             top={{ base: '-150', md: '-10' }}
             right={{ base: '-4', md: '-30' , xl:'-35'}}
@@ -50,18 +56,9 @@ export default function Introduction({ introduction }) {
             w={{ base: '300px', md: '400px' }}
             alt=""
             src="https://framerusercontent.com/images/M9s4txXkH3jzk9psUXH7UpLw7sU.png?scale-down-to=512">
-          </Image>
-          <Image
-            pos="absolute"
-            zIndex={0}
-            top={{ base: '0', md: '-15' }}
-            left={{ base: '-4', md: '-10' }}
-            w={{ base: '70px', md: '150px' }}
-            alt=""
-            filter="invert(0.1)"
-            src="https://svgsilh.com/svg/26432.svg"
-          ></Image>
-          <Text
+          </Image> */}
+          
+          {/* <Text
             pos="relative"
             zIndex={1}
             color="button1"
@@ -69,19 +66,41 @@ export default function Introduction({ introduction }) {
             fontWeight="medium"
           >
             DPI for AI
-          </Text>
+          </Text> */}
+          <Image
+            pos="absolute"
+            zIndex={0}
+            top={{ base: '0', md: '-10' }}
+            left={{ base: '-4', md: '-10' }}
+            w={{ base: '70px', md: '200px' }}
+            alt=""
+            filter="invert(0.1)"
+            src="https://svgsilh.com/svg/26432.svg"
+          ></Image>
+          
         </Box>
-        <Heading
+        <Heading 
+        pos="relative"
+        zIndex={1}
+        align="center"
+        color="displayColor"
+        fontSize={"display"}
+        lineHeight={'100%'}
+        letterSpacing={{ sm: '-1.2px', md: '-1.8px' }}
+        >
+          Open Cloud Compute</Heading>
+        
+        {/* <Heading
           pos="relative"
           zIndex={1}
-          w={{base:"75%",xl:"90%"}}
+          w={{base:"90%",xl:"90%"}}
           color="displayColor"
           fontSize="display"
           lineHeight={'95%'}
           letterSpacing={{ sm: '-1.2px', md: '-1.8px' }}
         >
           Open Cloud Compute
-        </Heading>
+        </Heading> */}
       </SlideFade>
 
       <SlideFade
@@ -91,16 +110,31 @@ export default function Introduction({ introduction }) {
       >
         <Heading
           color="textSecondary"
-          fontSize="display2"
+          fontSize="display4"
           fontWeight="medium"
           letterSpacing="-1.6px"
           whiteSpace="pre-wrap"
         >
-          <Box as="span" color="displayColor">
-          For Developers
+          <Box as="span" color="button1">
+          NVIDIA AI Summit India
           </Box>
         </Heading>
+        
       </SlideFade>
+      <SlideFade
+      direction="top"
+      transition={{ enter: { duration: 0.4, delay: 0.9 } }}
+      in={true}>
+      <Text
+            pos="relative"
+            zIndex={1}
+            color="displayColor"
+            fontSize="display2"
+            fontWeight="medium"
+          >
+            Mumbai | October 23–25, 2024
+          </Text>
+          </SlideFade>
     </Stack>
   )
 }

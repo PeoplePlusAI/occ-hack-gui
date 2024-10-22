@@ -181,7 +181,7 @@ export default function HorizontalFilterUI({ providers, usecases = null, setFilt
           <SelectionIconButton text='CPU' icon={FaServer} onClick={() => changeComputeSelection(ComputeTypes.CPU)} isActive={ComputeTypes.CPU == currentSelection} />
           <Spacer />
           <Button px={4} py={2} color="white" bg="#111827" borderRadius="md" shadow="0 0 0 1px #3b82f6" _hover={{ bg: "#1f2937" }} _active={{ bg: "#374151" }} onClick={clearFilters}>
-            <Text fontSize="md" fontWeight="medium">
+            <Text fontSize={{base:"sm",md:"md"}} fontWeight="medium">
               Clear Filters
             </Text>
           </Button>
