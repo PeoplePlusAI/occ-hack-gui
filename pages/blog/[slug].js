@@ -156,19 +156,19 @@ export default function Post({ metadata, publishedDate, source, toc }) {
           </Stack>
         </HStack>
 
-        <Stack w="100%" mt="36px" mb="15vh">
+        {/* <Stack w="100%" mt="36px" mb="15vh">
           {isCommentsLoading && (
-            <Center flexDir="column" pt={8}>
+            <Center flexDir="column" pt={8}> */}
               {/* <Spinner w="56px" h="56px" color="#058d92" thickness="5px" />
               <Text pt={2} color="textSecondary" fontSize="sm">
                 Loading comments...
               </Text> */}
-            </Center>
+            {/* </Center>
           )}
           <Stack opacity={isCommentsLoading ? 0 : 1}>
             <div id="comments" />
           </Stack>
-        </Stack>
+        </Stack> */}
       </Container>
     </>
   )

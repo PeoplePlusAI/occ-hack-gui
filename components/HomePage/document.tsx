@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react'
-import { Box, Heading, SimpleGrid, Text, Button, VStack, Icon, useColorModeValue, HStack } from '@chakra-ui/react'
+import { Box, Heading, SimpleGrid, Text, Button, VStack, Icon, useColorModeValue, HStack,Link } from '@chakra-ui/react'
 import { FaPencilAlt, FaSearch, FaFileAlt } from 'react-icons/fa'
 
 const DocumentCard = ({ title, description,  icon, onClick }) => {
@@ -8,7 +8,7 @@ const DocumentCard = ({ title, description,  icon, onClick }) => {
   const textColor = useColorModeValue('gray.100', 'gray.200')
   const buttonBg = 'button1'
   const borderColour ='white'
-  const buttonHoverBg = useColorModeValue('blue.700', 'blue.600')
+  const buttonHoverBg = "#23b075"
 
   return (
     <Box
@@ -59,7 +59,7 @@ export default function DocumentComponent() {
             title="Submit Your Use Case"
             description="Your Compute is on us if you have a great idea!"
             icon={FaPencilAlt}
-            onClick={() => console.log('Open Cloud Compute Charter clicked')}
+            onClick={() => window.open('https://peopleplus.ai/', '_blank')}
           />
           <DocumentCard
             title="More about People+AI"
@@ -71,7 +71,7 @@ export default function DocumentComponent() {
             title="Search resource by use case"
             description="Your Compute is on us if you have a great idea!"
             icon={FaSearch}
-            onClick={() => console.log('Concept note on Micro Data Centres clicked')}
+            onClick={() => window.open('/resources', '_self')}
           />
         </SimpleGrid>
       </VStack>

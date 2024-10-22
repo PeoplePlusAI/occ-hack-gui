@@ -69,7 +69,7 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
         <HStack h="3em" spacing={3}>
           <Icon as={ resourceCard.computeType == ComputeTypes.GPU ? BsGpuCard : (resourceCard.computeType == ComputeTypes.STORAGE ? FaDatabase : FaServer)} boxSize={8} color="white" />
           <VStack align="center" spacing={0}>
-            <Text align="center" color="gray.400" fontSize={fontSize} fontWeight="bold">
+            <Text align="center" color="white" fontSize={fontSize} fontWeight="bold">
               {resourceCard.xaas.templateName}
             </Text>
             {/* <Text color="gray.500" fontSize="sm">
@@ -79,19 +79,19 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
         </HStack>
         <VStack align="stretch" spacing={2} style={{ marginTop: '20px' }}>
           <HStack justify="space-between">
-            <Text color="gray.400" fontSize="xl">
+            <Text color="white" fontSize="xl">
               Type
             </Text>
             <Text fontSize="xl">{resourceCard.computeType == 1  ?  "GPU" : "CPU" }</Text>
           </HStack>
           <HStack justify="space-between">
-            <Text color="gray.400" fontSize="xl">
+            <Text color="white" fontSize="xl">
               Provider
             </Text>
             <Text fontSize="xl">{resourceCard.providerName}</Text>
           </HStack>
           <HStack justify="space-between">
-            <Text color="gray.400" fontSize="xl">
+            <Text color="white" fontSize="xl">
               Data Storage
             </Text>
             <Text fontSize="xl">{resourceCard.storage}</Text>
@@ -103,7 +103,7 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
             <Text fontSize="xl">{resourceCard.memory}</Text>
           </HStack> */}
           <HStack justify="space-between">
-            <Text color="gray.400" fontSize="xl">
+            <Text color="white" fontSize="xl">
               Compute
             </Text>
             <Text fontSize="xl">{resourceCard.compute}</Text>

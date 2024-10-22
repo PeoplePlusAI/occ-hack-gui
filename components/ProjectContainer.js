@@ -3,6 +3,7 @@ import { Stack } from '@chakra-ui/react'
 
 const ProjectContainer = styled(Stack)`
   &&& {
+    text-align: justify;
     font-size: 16px;
     * {
       box-sizing: border-box;
