@@ -26,6 +26,7 @@ export default function Index({ introduction }) {
         >
           <Introduction introduction={introduction} />
           <br />
+          <DocumentComponent />
           {/* <Countdown targetDate="2024-10-20T09:00:00" /> */}
           <Flex as='section' align="center" justify="center" direction={"column"} alignSelf='center'>
             <Text align="center" mb={5} fontSize={"5xl"} fontWeight="medium">The List of Providers is now Live!</Text>
@@ -35,7 +36,6 @@ export default function Index({ introduction }) {
           </Button>
           </Link>
           </Flex>
-          <DocumentComponent />
           <OCCPartners />
           {/* <YoutubeVideo />  */}
           <Flex as='section' align="center" justify="center" alignSelf='center'>

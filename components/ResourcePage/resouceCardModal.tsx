@@ -59,7 +59,7 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
       p={4}
       bg="secondary"
       borderWidth="1px"
-      borderColor="blue.200"
+      borderColor="white"
       borderRadius="lg"
       shadow="md"
       _hover={{ cursor: "pointer" }}

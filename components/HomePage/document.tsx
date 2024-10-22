@@ -1,27 +1,30 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react'
 import { Box, Heading, SimpleGrid, Text, Button, VStack, Icon, useColorModeValue, HStack } from '@chakra-ui/react'
-import { FaPencilAlt, FaSync, FaFileAlt } from 'react-icons/fa'
+import { FaPencilAlt, FaSearch, FaFileAlt } from 'react-icons/fa'
 
 const DocumentCard = ({ title, description,  icon, onClick }) => {
-  const bgColor = useColorModeValue('gray.700', 'gray.800')
+  const bgColor = ''
   const textColor = useColorModeValue('gray.100', 'gray.200')
-  const buttonBg = useColorModeValue('blue.600', 'blue.500')
+  const buttonBg = 'button1'
+  const borderColour ='white'
   const buttonHoverBg = useColorModeValue('blue.700', 'blue.600')
 
   return (
     <Box
       p={6}
       bg={bgColor}
+      borderWidth="1px"
+      borderColor={borderColour}
       borderRadius="lg"
       shadow="xl"
       _hover={{ transform: 'translateY(-5px)' }}
       transition="all 0.3s"
     >
       <VStack align="start" spacing={4}>
-        <HStack>
+        <HStack minH={20}>
           <Icon as={icon} w={12} h={8} px={2} color={textColor} />
-          <Text color={textColor} fontSize="2xl" fontWeight="bold">
+          <Text color={textColor} fontSize="2xl" fontWeight="bold" >
             {title}
           </Text>
         </HStack>
@@ -34,7 +37,7 @@ const DocumentCard = ({ title, description,  icon, onClick }) => {
           _hover={{ bg: buttonHoverBg }}
           onClick={onClick}
         >
-          Read More
+          Click Here
         </Button>
       </VStack>
     </Box>
@@ -61,13 +64,13 @@ export default function DocumentComponent() {
           <DocumentCard
             title="More about People+AI"
             description="Your Compute is on us if you have a great idea!"
-            icon={FaSync}
+            icon={FaFileAlt}
             onClick={() => console.log('Q1 2024 Project Update clicked')}
           />
           <DocumentCard
             title="Search resource by use case"
             description="Your Compute is on us if you have a great idea!"
-            icon={FaFileAlt}
+            icon={FaSearch}
             onClick={() => console.log('Concept note on Micro Data Centres clicked')}
           />
         </SimpleGrid>
