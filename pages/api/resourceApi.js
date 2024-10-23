@@ -5,6 +5,7 @@ const API_URL = process.env.NEXT_PUBLIC_RESOURCE_API_URL;
 function formatData(item) {
   return {
     resourceType: item["resourceType"],
+    location : item["location"],
     computeType: item["requiredSpecifications"]["compute"].hasOwnProperty('GPU') ? ComputeTypes.GPU : ComputeTypes.CPU,
     providerName: item["provider-name"],
     resourceId: item["resourceId"],

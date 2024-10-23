@@ -12,6 +12,7 @@ enum ComputeTypes {
 
 interface ResourceCardProps {
   computeType: ComputeTypes
+  location : string
   version: string
   providerName: string
   resourceId: string  
@@ -72,8 +73,8 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
             <Text align="center" color="white" fontSize={fontSize} fontWeight="bold">
               {resourceCard.xaas.templateName}
             </Text>
-            {/* <Text color="gray.500" fontSize="sm">
-              {resourceCard.occSpecName}
+            {/* <Text align="left" color="gray.500" fontSize="sm">
+              {resourceCard.location}
             </Text> */}
           </VStack>
         </HStack>
@@ -89,6 +90,12 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
               Provider
             </Text>
             <Text fontSize="xl">{resourceCard.providerName}</Text>
+          </HStack>
+          <HStack justify="space-between">
+            <Text color="white" fontSize="xl">
+              Location
+            </Text>
+            <Text fontSize="xl">{resourceCard.location}</Text>
           </HStack>
           <HStack justify="space-between">
             <Text color="white" fontSize="xl">
@@ -149,6 +156,7 @@ const ResourceCard: React.FC<MyComponentProps> = ({ resourceCard }) => {
               <Text><strong>Provider:</strong> {resourceCard.providerName}</Text>
               {/* <Text><strong>Memory:</strong> {resourceCard.memory}</Text> */}
               <Text><strong>Compute:</strong> {resourceCard.compute}</Text>
+              <Text><strong>Location:</strong> {resourceCard.location}</Text>
               {/* <Text><strong>Python Version:</strong> {resourceCard.pythonVersion}</Text> */}
               <Text><strong>Use Cases:</strong> {resourceCard.useCases.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(', ')}</Text>
               {/* <Text><strong>XaaS:</strong> {resourceCard.xaas.presence} (Template: {resourceCard.xaas.templateName}, Version: {resourceCard.xaas.version})</Text> */}
