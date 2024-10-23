@@ -12,6 +12,7 @@ const DocumentCard = ({ title, description,  icon, onClick }) => {
 
   return (
     <Box
+      mt={10}
       p={6}
       bg={bgColor}
       borderWidth="1px"
@@ -28,7 +29,7 @@ const DocumentCard = ({ title, description,  icon, onClick }) => {
             {title}
           </Text>
         </HStack>
-        <Text color={textColor} fontSize="md">
+        <Text minH={"150px"} color={textColor} fontSize="md" textAlign={"justify"}>
           {description}
         </Text>
         <Button
@@ -49,27 +50,28 @@ export default function DocumentComponent() {
   const textColor = useColorModeValue('gray.100', 'gray.200')
 
   return (
-    <Box px={0} py={12} bg={bgColor}>
-      <VStack align="stretch" maxW="1200px" mx="auto" spacing={8}>
+    <Box px={0} py={6} bg={bgColor}>
+      <VStack maxW="80%" mx="auto" spacing={8}>
         <Heading as="h1" color={textColor} textAlign="center" size="2xl">
            Quick Links
         </Heading>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
           <DocumentCard
             title="Submit Your Use Case"
-            description="Your Compute is on us if you have a great idea!"
+            description="Are you are changing the way we do finances with Gen AI or improving healthcare in a remote town of India? 
+If you have a great project or startup idea, submit it here. Top 10 teams- your compute is on us!"
             icon={FaPencilAlt}
-            onClick={() => window.open('https://peopleplus.ai/', '_blank')}
+            onClick={() => window.open('https://pplus.ai/occusecase', '_blank')}
           />
           <DocumentCard
             title="More about People+AI"
-            description="Your Compute is on us if you have a great idea!"
+            description="Discover our projects or volunteer with us"
             icon={FaFileAlt}
-            onClick={() => console.log('Q1 2024 Project Update clicked')}
+            onClick={() => window.open('https://peopleplus.ai/', '_blank')}
           />
           <DocumentCard
             title="Search resource by use case"
-            description="Your Compute is on us if you have a great idea!"
+            description="Compute for all- developers, startups and enterpises at OCC. Find your compute in minutes with our use case navigation and universal search features."
             icon={FaSearch}
             onClick={() => window.open('/resources', '_self')}
           />

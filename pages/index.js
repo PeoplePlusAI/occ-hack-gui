@@ -19,13 +19,12 @@ export default function Index({ introduction }) {
           as="main"
           alignItems="flex-start"
           justifyContent="center"
-          mt={{ base: '15vh', md: '20vh' }}
+          mt={{ base: '5vh', md: '10vh' }}
           pb="144px"
-          spacing={{ base: '100px', md: '144px' }}
+          spacing={{ base: '100px', md: '72px' }}
           // resize={vantaRef}
         >
           <Introduction introduction={introduction} />
-          <br />
           <DocumentComponent />
           {/* <Countdown targetDate="2024-10-20T09:00:00" /> */}
           <Flex as='section' align="center" justify="center" direction={"column"} alignSelf='center'>

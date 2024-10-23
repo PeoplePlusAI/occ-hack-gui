@@ -35,9 +35,11 @@ export default function Introduction({ introduction }) {
       >
       <Image 
             zIndex={0}
-            w={{ base: '350px', md: '500px' }}
+            w={{ base: '250px', md: '400px' }}
+            my={5}
             alt=""
-            src="/peopleAi.svg">
+            src="/PeopleAI_logo.png">
+
       </Image>
       </SlideFade>
       <SlideFade
@@ -109,6 +111,7 @@ export default function Introduction({ introduction }) {
         in={true}
       >
         <Heading
+          mt={10}
           color="textSecondary"
           fontSize="display4"
           fontWeight="medium"
